@@ -33,8 +33,8 @@ TODO
 - [x] RAP Data => Blueprint API转换器
 - [x] RAP.node服务搭建
 - [x] Aglio接入
-- [ ] Dredd接入
-- [ ] api-mock接入
+- [ ] api-mock接入 before 2014.10.30
+- [ ] Dredd接入 before 2014.11.30
 
 ### RAP Open API @Bosn
 - [x] queryModel API
