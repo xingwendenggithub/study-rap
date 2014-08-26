@@ -15,7 +15,7 @@ Welcome to the RAP wiki!
 * [RAP Design Core](http://thx.github.io/RAP/resources/rap-intro/)
 
 ### Currently Progress
-[RAP v0.11](https://github.com/thx/RAP/wiki/RAPv0.11-Requirement-Doc)
+[RAP v0.11](https://github.com/thx/RAP/wiki/RAPv0.11)
 - [ ] Requirements Design
 - [ ] Tech Design
 - [ ] Develop
