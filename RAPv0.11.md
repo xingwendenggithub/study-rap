@@ -26,9 +26,16 @@ TODO
 TODO
 
 ### BPA规范接入 @Bosn
-- [ ] RAP Data => Blueprint API转换器
+- [x] RAP Data => Blueprint API转换器
+- [x] RAP.node服务搭建
+- [x] Aglio接入
+- [ ] Dredd接入
+- [ ] api-mock接入
 
 ### RAP Open API @Bosn
+- [x] queryModel API
+- [x] querySchema API
+- [x] queryRAPModel API
 
 ## 需求设计
 
@@ -42,9 +49,10 @@ TODO
 TODO
 
 ### BPA规范接入
-TODO
+具体参见[ISSUE19](https://github.com/thx/RAP/issues/19)
 
 ### RAP Open API
+具体参文档的[开放API](http://thx.github.io/RAP/tutorials/)部分
 
 #### 相关图片
 
