@@ -54,20 +54,22 @@ TODO
 ### RAP Open API
 具体参文档的[开放API](http://thx.github.io/RAP/tutorials/)部分
 
-#### 相关图片
-
-#####首页
-![](http://gtms02.alicdn.com/tps/i2/TB1iiXtGXXXXXcXXpXX_9cgHXXX-990-565.png)
-
-#####团队项目
-![](http://gtms01.alicdn.com/tps/i1/TB1LW0yGXXXXXcNXpXXmOcAHXXX-990-735.png)
-
-#####规范集
-![](http://gtms04.alicdn.com/tps/i4/TB1mRdsGXXXXXaOXFXXm3AGHXXX-990-800.png)
-
-#####模板集
-![](http://gtms03.alicdn.com/tps/i3/TB1JARtGXXXXXapXXXXm3AGHXXX-990-800.png)
-
 ## 技术设计
 
 TODO
+
+## 界面设计 & 交互图
+
+### 交互设计
+
+####首页
+![](http://gtms02.alicdn.com/tps/i2/TB1iiXtGXXXXXcXXpXX_9cgHXXX-990-565.png)
+
+####团队项目
+![](http://gtms01.alicdn.com/tps/i1/TB1LW0yGXXXXXcNXpXXmOcAHXXX-990-735.png)
+
+####规范集
+![](http://gtms04.alicdn.com/tps/i4/TB1mRdsGXXXXXaOXFXXm3AGHXXX-990-800.png)
+
+####模板集
+![](http://gtms03.alicdn.com/tps/i3/TB1JARtGXXXXXapXXXXm3AGHXXX-990-800.png)
