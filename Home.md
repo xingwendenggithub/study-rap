@@ -3,8 +3,10 @@ Welcome to the RAP wiki!
 ### Links
 
 * [issues](https://github.com/thx/RAP/issues)
-* [Docs](http://thx.github.io/RAP) (zh) `English version will be pushed later...`
+* [Docs](http://thx.github.io/RAP)
 * Support [Bosn](bosn@outlook.com)、 [Wangjeaf](wangjeaf@gmail.com)
+
+`English version will be pushed later...`
 
 ### Resources
 
