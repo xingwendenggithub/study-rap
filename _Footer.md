@@ -1,1 +1,1 @@
-RAP, let's get fast!
+RAP, 让协作健步如飞!
