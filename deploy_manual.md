@@ -1,7 +1,23 @@
+
+
 <!-- toc -->
 
+* [Preparations](#preparations)
+* [Build Project](#build-project)
+  * [Obtain source code](#obtain-source-code)
+  * [Import to IDE](#import-to-ide)
+  * [Initialize database](#initialize-database)
+  * [Little configurations](#little-configurations)
+  * [Context-root](#context-root)
+* [Start Server](#start-server)
+* [Common issues](#common-issues)
+  * [How to manage teams(corporations)?](#how-to-manage-teamscorporations)
+  * [How to add administrator?](#how-to-add-administrator)
+  * [Why `mysql.local.properties` and `mysql.remote.properties` seperated?](#why-mysqllocalproperties-and-mysqlremoteproperties-seperated)
+  * [How to obtain update?](#how-to-obtain-update)
 
 <!-- toc stop -->
+
 
 
 ## Preparations
