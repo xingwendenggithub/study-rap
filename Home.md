@@ -1,8 +1,8 @@
 [切换至中文](主页)
 
-Welcome to RAP wiki! [RAP Official Site](http://thx.github.io/RAP)
+Welcome to RAP wiki!
 
-### Manuals
+### Navigator
 * Offical Site [link](http://thx.github.io/RAP)
 * What is RAP? [link](about)
 * If you are a RAP user, want to know how to operate in RAP, please check [User Manual](user_manual)
