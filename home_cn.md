@@ -5,10 +5,10 @@
 
 ### 导航
 * 官方站点[链接](http://thx.github.io/RAP/index_zh.html)
-* 了解什么是RAP?[链接](关于)
-* 如果您是RAP的用户，想要了解如何在RAP中操作，请查看[用户手册](用户手册)
-* 如果您想搭建自己的RAP服务器，了解如何部署RAP，请查看[部署手册](部署手册)
-* 如果您想参与开RAP开发，贡献代码或更好满足自己的业务，请查看[开发手册](开发手册)
+* 了解什么是RAP?[链接](about_cn)
+* 如果您是RAP的用户，想要了解如何在RAP中操作，请查看[用户手册](user_manual_cn)
+* 如果您想搭建自己的RAP服务器，了解如何部署RAP，请查看[部署手册](deploy_manual_cn)
+* 如果您想参与开RAP开发，贡献代码或更好满足自己的业务，请查看[开发手册](dev_manual_cn)
 
 ### 技术支持
 Issues(推荐): [提交您的issue](https://github.com/thx/RAP/issues)
