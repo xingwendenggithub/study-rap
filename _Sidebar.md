@@ -3,11 +3,11 @@
   * [User Manual](user_manual)
   * [Deploy Manual](deploy_manual)
   * [Dev Manual](dev_manual)
-* [Wiki主页](主页) (中文版)
-  * [什么是RAP](关于)
-  * [用户手册](用户手册)
-  * [部署手册](部署手册)
-  * [开发手册](开发手册)
+* [Wiki主页](home_cn) (中文版)
+  * [什么是RAP](about_cn)
+  * [用户手册](user_manual_cn)
+  * [部署手册](deploy_manual_cn)
+  * [开发手册](dev_manual_cn)
 
 
 
