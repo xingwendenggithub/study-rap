@@ -1,4 +1,3 @@
-
 <!-- toc -->
 
 * [Preparations](#preparations)
@@ -35,7 +34,7 @@ Before work of RAP deployment, you should get well prepared with things below:
 
 ```bash
 git clone git@github.com:thx/RAP.git
-git checkout release
+git checkout release_en
 ```
 
 Ensure you switched to branch [release_en], we keep this branch always working correctly.
@@ -84,4 +83,4 @@ This is used for environment switch, you can config local database and remote da
 
 ### How to obtain update?
 
-We'll ensure release branch is always correct. Please focus on RAP wiki, when new release comes out, try to git pull from release branch. Every new release will have md file to tell you how to transfer.
+We'll ensure release_en branch is always correct. Please focus on RAP wiki, when new release_en comes out, try to git pull from release_en branch. Every new release_en will have md file to tell you how to transfer.
