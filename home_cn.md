@@ -1,3 +1,5 @@
+[Switch to English](home)
+
 欢迎来到RAP Wiki! 
 
 ### 上手视频
