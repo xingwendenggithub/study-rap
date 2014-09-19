@@ -1,4 +1,4 @@
-[切换至中文](主页)
+[切换至中文](home_cn)
 
 Welcome to RAP wiki!
 
