@@ -1,5 +1,4 @@
 
-
 <!-- toc -->
 
 * [Preparations](#preparations)
@@ -39,7 +38,7 @@ git clone git@github.com:thx/RAP.git
 git checkout release
 ```
 
-Ensure you switched to branch [release], we keep this branch always working correctly.
+Ensure you switched to branch [release_en], we keep this branch always working correctly.
 
 ### Import to IDE
 
