@@ -1,6 +1,5 @@
 
 
-
 <!-- toc -->
 
 * [Create your account](#create-your-account)
@@ -126,7 +125,6 @@ By clicking `Mock` button on the right top corner, you can switch Mock tags visi
 Write @mock tags in `remark` columns, remarks should be separated with `@mock` tag by character `;`, eg->
 
 There's a parameter called `userId`, remark is `User ID`, mock tag is `@mock=123`, than we can write in this way:
-某一个参数叫`userId`，备注信息是 `用户ID`, mock标签是 `@mock=123`，则在备注中应该填写:
 
 ```
 Variable Name       Remark
