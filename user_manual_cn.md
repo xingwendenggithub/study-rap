@@ -305,11 +305,12 @@ reg:www.example/biz[0-9]{4}/query
 #### 路径和请求参数
 
 ```javascript
-http://{domain}/queryModel.do?projectId={projectId}&ver={ver}
+http://{domainName}/api/queryModel.do?projectId={projectId}&ver={ver}
 ```
 
 - `{projectId}`为项目ID
 - `{ver}`为版本号，不传默认返回当前版本
+- `{domainName}`RAP的域名，与您访问RAP页面中的域名一致
 
 #### 响应数据结构
 
@@ -321,7 +322,7 @@ http://{domain}/queryModel.do?projectId={projectId}&ver={ver}
 
 #### EXAMPLE
 
-链接：`http://rap.domain.com/api/queryModel.do?projectId=423&ver=0.0.0.2`
+链接：`http://{domainName}/api/queryModel.do?projectId=423&ver=0.0.0.2`
 
 ```json
 {"model":{"moduleList":[{"id":518,"pageList":[{"id":738,"interfaceList":[{"id":2024,"desc":"","reqUrl":"a","name":"某请求","reqType":"1"},{"id":2025,"desc":"","reqUrl":"bbb","name":"bbb","reqType":"1"}],"name":"某页面","intro":""}],"name":"某模块（点击编辑后双击修改）","intro":""}],"id":429,"name":"临时项目一会儿删掉不要动","ver":"0.0.0.4","intro":""},"code":200,"msg":""}
@@ -332,7 +333,7 @@ http://{domain}/queryModel.do?projectId={projectId}&ver={ver}
 #### 路径和请求参数
 
 ```javascript
-http://{domain}/querySchema.do?actionId={actionId}&ver={ver}&projectId={projectId}&type={type}
+http://{domainName}/api/querySchema.do?actionId={actionId}&ver={ver}&projectId={projectId}&type={type}
 ```
 
 其中
@@ -340,6 +341,7 @@ http://{domain}/querySchema.do?actionId={actionId}&ver={ver}&projectId={projectI
 - `{actionId}`为接口的ID
 - `{ver}`和`{projectId}`均为可选参数，同时出现表示指定某一版本的接口。
 - `{type}`值为request时表示返回请求参数的schema，其它值或不传默认返回响应参数的schema
+- `{domainName}`RAP的域名，与您访问RAP页面中的域名一致
 
 #### 响应数据结构
 
@@ -351,7 +353,7 @@ http://{domain}/querySchema.do?actionId={actionId}&ver={ver}&projectId={projectI
 
 #### EXAMPLE
 
-链接：`http://rap.domain.com/api/querySchema.do?projectId=429&actionId=2024&ver=0.0.0.2`
+链接：`http://{domainName}/api/querySchema.do?projectId=429&actionId=2024&ver=0.0.0.2`
 
 ```json
 {"schema":{"id":2024,"$schema":"http://json-schema.org/draft-04/schema","properties":{"resParam":{"id":38393,"title":"某响应参数","description":"","format":"MOCKJS||","required":false,"type":"number"},"a":{"id":38392,"title":"","description":"","format":"MOCKJS||","required":false,"type":""}},"required":"false","type":"object"},"code":200,"msg":""}
