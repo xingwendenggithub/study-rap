@@ -1,5 +1,4 @@
 
-
 <!-- toc -->
 
 * [Create your account](#create-your-account)
@@ -357,7 +356,7 @@ DEMO
             var urls = RAP.getWhiteList();
            
             if (urls.indexOf(url) != -1) {
-                config.url = 'http://rap.alibaba-inc.com/mockjsdata/257' + url;
+                config.url = 'http://{{domainName}}/mockjsdata/257' + url;
             }
 
             return config;
