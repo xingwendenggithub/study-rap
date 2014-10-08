@@ -1,4 +1,3 @@
-
 <!-- toc -->
 
 * [RAP介绍 & 视频教程](#rap介绍-视频教程)
@@ -128,7 +127,7 @@ id|+1     @mock=100
 // 表示id从100开始，每次加1
 ```
 
-具体Mock规则如何填写，请访问<a href="http://mockjs.com" target="_blank">MockJS文档</a>，也可参考RAP平台中 <a href="http://rap.alibaba-inc.com/workspace/myWorkspace.action?projectId=79&mock=true&actionId=899" target="_blank">MockJS对接的例子</a>。
+具体Mock规则如何填写，请访问<a href="http://mockjs.com" target="_blank">MockJS文档</a>，也可参考RAP平台中 <a href="http://{{domainName}}/workspace/myWorkspace.action?projectId=79&mock=true&actionId=899" target="_blank">MockJS对接的例子</a>。
 
 ### Mock标签的使用
 
@@ -183,7 +182,7 @@ RAP提供了 `Mock插件`（暂时仅支持Kissy和jQuery），使用只需要�
 将以下代码写在KISSY或jQuery js代码之后即可：
 
 ```html
-<script type="text/javascript" src="http://rap.alibaba-inc.com/rap.plugin.js?projectId={{projectId}}&mode={{mode}}"></script>
+<script type="text/javascript" src="http://{{domainName}}/rap.plugin.js?projectId={{projectId}}&mode={{mode}}"></script>
 ```
 
 其中：
@@ -295,7 +294,7 @@ reg:www.example/biz[0-9]{4}/query
 
 这里MOCK服务会根据正则来匹配正确的接口。
 
-具体例子请参见项目：[RESTful API支持](http://rap.alibaba-inc.com/workspace/myWorkspace.action?projectId=265&mock=true)
+具体例子请参见项目：[RESTful API支持](http://{{domainName}}/workspace/myWorkspace.action?projectId=265&mock=true)
 
 
 ## 开放API
@@ -395,7 +394,7 @@ Angularjs插件貌似不能通过覆盖全局来达到RAP插入的效果，只�
             var urls = RAP.getWhiteList();
            
             if (urls.indexOf(url) != -1) {
-                config.url = 'http://rap.alibaba-inc.com/mockjsdata/257' + url;
+                config.url = 'http://{{domainName}}/mockjsdata/257' + url;
             }
 
             return config;
@@ -414,13 +413,13 @@ Angularjs插件貌似不能通过覆盖全局来达到RAP插入的效果，只�
 可以的，只要将请求路径中的/mockjs/修改为/mockjsdata/即可，例如：
 
 ```
-http://rap.alibaba-inc.com/mockjs/79/rap_mockjs_rules_demo.do?
+http://{{domainName}}/mockjs/79/rap_mockjs_rules_demo.do?
 ```
 
 将返回MockJS模板，而
 
 ```
-http://rap.alibaba-inc.com/mockjsdata/79/rap_mockjs_rules_demo.do?
+http://{{domainName}}/mockjsdata/79/rap_mockjs_rules_demo.do?
 ```
 
 会返回MockJS数据。
