@@ -5,6 +5,12 @@
 ### 上手视频
 片源：<a href="http://cloud.video.taobao.com//play/u/11051796/p/1/e/1/t/1/11622279.swf" target="_blank">淘宝视频</a> <a href="http://v.youku.com/v_show/id_XNjk5NjMxODA4.html" target="_blank">优酷</a>
 
+### RAP学习中心 `new`
+
+定期更新的分步骤视频教程
+
+[http://thx.github.io/RAP/study.html](http://thx.github.io/RAP/study.html)
+
 ### 导航
 * 官方站点[链接](http://thx.github.io/RAP/index_zh.html)
 * 了解什么是RAP?[链接](about_cn)
