@@ -346,29 +346,9 @@ When someone request MOCK service with projectId=1, if no matched action, MOCK s
 
 ### How to use RAP plugin in AngularJS?
 
-DEMO
+Thank @goto100 for providing AngularJS RAP Plugin to use RAP mock data:
+[https://github.com/goto100/ng-rap](https://github.com/goto100/ng-rap)
 
-```javascript
-	app.config(function($httpProvider) {
-    var interceptor = {
-        request: function(config) {
-            var url = config.url;
-            var urls = RAP.getWhiteList();
-           
-            if (urls.indexOf(url) != -1) {
-                config.url = 'http://{{domainName}}/mockjsdata/257' + url;
-            }
-
-            return config;
-        }
-    };
-   
-    $httpProvider.interceptors.push(function() {
-        return interceptor;
-    });
-}); 
-
-```
 
 ### Any way to let MOCK service returns MockJS data, not MockJS rule templates?
 
