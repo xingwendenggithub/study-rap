@@ -378,35 +378,8 @@ http://{domainName}/api/querySchema.do?actionId={actionId}&ver={ver}&projectId={
 
 ### 我使用的AngularJS如何使用RAP插件？
 
-感谢@义宇 同学给出AngularJS的方案：
-
-Angularjs插件貌似不能通过覆盖全局来达到RAP插入的效果，只能在新建的Angular模块中进行配置
-
-下面的代码，是 @义宇 在使用Angularjs+RAP时开发的插件代码，发给需要的用户参考下吧。
-
-注意：下面的代码，只支持RAP的白名单模式。
-
-```javascript
-	app.config(function($httpProvider) {
-    var interceptor = {
-        request: function(config) {
-            var url = config.url;
-            var urls = RAP.getWhiteList();
-           
-            if (urls.indexOf(url) != -1) {
-                config.url = 'http://{{domainName}}/mockjsdata/257' + url;
-            }
-
-            return config;
-        }
-    };
-   
-    $httpProvider.interceptors.push(function() {
-        return interceptor;
-    });
-}); 
-
-```
+感谢@义宇 提供AngularJS版RAP插件：
+[https://github.com/goto100/ng-rap](https://github.com/goto100/ng-rap)
 
 ### 有办法让RAP服务直接返回MockJS数据，而不是MockJS模板吗？
 
