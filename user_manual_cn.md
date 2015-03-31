@@ -274,8 +274,13 @@ http://www.taobao.com/getREST?{path}=delete
 
 ### 最外层为数组的接口
 
+#### 指令集(@deprecated)
 需要在接口描述的开头增加一条指令：@type=array_map;@length=1
 表示返回的最外层结构是数组，长度是1。
+
+#### 表单选项
+在编辑接口详情信息表单时，下方有"返回格式"选项。
+但数组长度仍然需通过@length指令控制。
 
 ### RESTful API的支持
 
