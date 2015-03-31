@@ -252,11 +252,16 @@ http://www.taobao.com/getREST?{path}=delete
 
 ### Outer structure control
 
+#### Using statements(@deprecated)
 On default, the JSON structure is always {}, not [{}].
 If you want the outer structure is array, add this into action descriptions:
 @type=array_map;@length=1
 
 this means you want the outer structure is array and length is 1.
+
+#### Using action edit form
+When editing detail information on Action Edit Form, there's "Return format" option below.
+How ever, array length control still need old statments(@length) to fullfill.
 
 ### RESTful API support
 
