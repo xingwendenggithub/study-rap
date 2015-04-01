@@ -293,6 +293,7 @@ http://www.taobao.com/getREST?{path}=update  // 更新接口
 
 ### RESTful API的支持
 
+#### 参数化的请求路径
 一些常见的RESTful API，如：www.example.com/data/100/query 请在RAP的请求链接中填写：
 
 ```bash
@@ -310,6 +311,14 @@ reg:www.example/biz[0-9]{4}/query
 
 具体例子请参见项目：[RESTful API支持](http://{{domainName}}/workspace/myWorkspace.action?projectId=265&mock=true)
 
+
+#### 根据实际传参值决定所匹配接口
+RESTFul API经常根据具体参数值决定接口，例如下面两个接口的路径是一样的，只是path传参不同。
+
+默认情况下RAP会根据`相对路径`去匹配接口，为了在匹配接口时考虑参数的`值`，需要在接口的请求链接中，将该参数用{path}标记出来，并赋值，这样MOCK工具在匹配该接口时，会根据参数path的值来匹配到正确的接口。
+```
+http://www.taobao.com/getREST?{path}=delete  // 删除接口
+http://www.taobao.com/getREST?{path}=update  // 更新接口
 
 ## 开放API
 
