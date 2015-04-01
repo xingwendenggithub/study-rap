@@ -264,13 +264,22 @@ RAP开放了Mock规则的API，QA或对此有需求的同学可以通过RAP API�
 
 ### 接口文档请求链接语法
 
-http://www.taobao.com/getItem?[callback]=foo
-
+#### 自定义JSONP的callback函数名
 `[callback]` 表示参数`callback`会用作JSONP的回调key，若实际请求为getItem?callback=foo，则返回结果为:foo({...});
+```
+http://www.taobao.com/getItem?[callback]=foo
+```
 
-http://www.taobao.com/getREST?{path}=delete
+#### RESTFul API根据实际传参值决定所匹配接口
+RESTFul API经常根据具体参数值决定接口，例如下面两个接口的路径是一样的，只是path传参不同。
 
-`{path}` 表示参数`path`会在RAP文档和开发环境进行接口对接时，需要考虑path参数，一般REST API会使用比较多。因为REST不同请求是通过参数区分的，比如getRest?path=delete, getRest?path=update, 而{path}表示两者为不同的接口。
+默认情况下RAP会根据`相对路径`去匹配接口，为了在匹配接口时考虑参数的`值`，需要在接口的请求链接中，将该参数用{path}标记出来，并赋值，这样MOCK工具在匹配该接口时，会根据参数path的值来匹配到正确的接口。
+```
+http://www.taobao.com/getREST?{path}=delete  // 删除接口
+http://www.taobao.com/getREST?{path}=update  // 更新接口
+```
+
+
 
 ### 最外层为数组的接口
 
