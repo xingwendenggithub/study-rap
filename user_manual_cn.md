@@ -127,7 +127,7 @@ id|+1     @mock=100
 // 表示id从100开始，每次加1
 ```
 
-具体Mock规则如何填写，请访问<a href="http://mockjs.com" target="_blank">MockJS文档</a>，也可参考RAP平台中 <a href="http://{{domainName}}/workspace/myWorkspace.action?projectId=79&mock=true&actionId=899" target="_blank">MockJS对接的例子</a>。
+具体Mock规则如何填写，请访问<a href="http://mockjs.com" target="_blank">MockJS文档</a>，也可参考RAP平台中MockJS对接的例子。
 
 ### Mock标签的使用
 
