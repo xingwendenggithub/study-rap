@@ -140,14 +140,27 @@ noEscapeDemo     @{mock}="123"       "noEscapeDemo" : ""1,2,3"" // Grammer error
 all @mock value will be escaped on default, if you don't want, please replaced by **@{mock}**.
 
 #### Dynamically generate MockJS template by request parameters.
-
-eg->
+By using grammer like `${page}`, RAP will replace this `${page}` to the real HTTP parameter value, eg->:
 
 ```bash
 @mock=${page}
 ```
 
-`${page}` will be replaced by the real request parameter `page`, eg-> if request link is domain.com?page=10, than this is equal to @mock=10.
+If the HTTP parameter `page`'s value is 123, than this will be equal to `@mock=123`
+
+Caution: if this grammer is used in identifier name, remember don't write `@mock=`(only used in remark area), eg->
+
+```json
+{"arr|10" : []}
+```
+
+This means the length of `arr` is 10. If this `10` want to be parameterized, than you can write:
+
+```
+"arr|${total}"
+```
+
+When HTTP parameter `total`'s value is 100, this will be equal to `arr|100`, namely generate 100 elements.
 
 ```bash
 @mock=${page=10}
