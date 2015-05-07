@@ -10,5 +10,5 @@ Welcome to RAP wiki!
 * If you want to be a contributor of RAP, or develop functions fit your own business, please check [Developer Manual](dev_manual)
 
 ### Technical Support
-Issues(Recommend): [Submit issue](https://github.com/thx/RAP/issues)
-Mail: [bosn@outlook.com](mailto:bosn@outlook.com)
+* Issues(Recommend): [Submit issue](https://github.com/thx/RAP/issues)
+* Mail: [bosn@outlook.com](mailto:bosn@outlook.com)
