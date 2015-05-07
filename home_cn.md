@@ -19,5 +19,5 @@
 * 如果您想参与开RAP开发，贡献代码或更好满足自己的业务，请查看[开发手册](dev_manual_cn)
 
 ### 技术支持
-Issues(推荐): [提交您的issue](https://github.com/thx/RAP/issues)
-Mail: [bosn@outlook.com](mailto:bosn@outlook.com)
+* Issues(推荐): [提交您的issue](https://github.com/thx/RAP/issues)
+* 旺旺技术支持群：582755829(是阿里旺旺群哦，不是QQ群)
