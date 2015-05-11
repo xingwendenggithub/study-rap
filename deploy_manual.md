@@ -26,7 +26,7 @@
 Before work of RAP deployment, you should get well prepared with things below:
 
 1. Eclipse/MyEclipse
-2. JDK 1.6+
+2. JDK 1.7+
 3. MySQL 5.6.12+
 4. Tomcat 6.*+
 5. Git
