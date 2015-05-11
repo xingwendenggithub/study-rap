@@ -22,7 +22,7 @@
 若想部署RAP服务，您需要具备J2EE开发环境。以下是我们想到的您所需的准备工作：
 
 1. Eclipse/MyEclipse/IDEA(推荐)
-2. JDK 1.6+
+2. JDK 1.7+
 3. MySQL 5.6.12+  // 太老的MySQL运行initialize.sql会报多timestamp错误
 4. Tomcat 6.*+
 5. Git
