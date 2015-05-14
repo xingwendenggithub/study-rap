@@ -1,6 +1,6 @@
 [Switch to English](home)
 
-欢迎来到RAP Wiki! 
+欢迎来到RAP Wiki! **遇到问题时**，可以先试试搜索下[issues](http://github.com/thx/RAP/issues)
 
 ### 上手视频
 片源：<a href="http://cloud.video.taobao.com//play/u/11051796/p/1/e/1/t/1/11622279.swf" target="_blank">淘宝视频</a> <a href="http://v.youku.com/v_show/id_XNjk5NjMxODA4.html" target="_blank">优酷</a>
