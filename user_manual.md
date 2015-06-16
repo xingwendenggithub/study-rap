@@ -381,3 +381,15 @@ changed to
 ```
 http://{domain}/mockjsdata/79/rap_mockjs_rules_demo.do?
 ```
+
+```
+Hint：why return mock rule instead of mock data?
+
+In default, RAP service return Mock.js template(rules), if using RAP plugin, it
+will convert rules => data for u.
+
+Advantages:
+1. Directly show the data how to be generated.
+2. Save network bandwidth.
+3. More flexible, have a chance to change rules in specific scene.
+```
