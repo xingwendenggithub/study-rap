@@ -419,7 +419,6 @@ http://{domainName}/api/querySchema.do?actionId={actionId}&ver={ver}&projectId={
 [https://github.com/goto100/ng-rap](https://github.com/goto100/ng-rap)
 
 ### 有办法让RAP服务直接返回MockJS数据，而不是MockJS模板吗？
-
 可以的，只要将请求路径中的/mockjs/修改为/mockjsdata/即可，例如：
 
 ```
@@ -433,3 +432,12 @@ http://{{domainName}}/mockjsdata/79/rap_mockjs_rules_demo.do?
 ```
 
 会返回MockJS数据。
+
+```
+小提示：为什么返回MOCK规则而不是数据？
+
+默认RAP的MOCK服务返回的是Mock.js模板，如果使用RAP插件，插件会负责Mock模板=>Mock数据的转换工作。
+这样做的好处：
+1. 可以直观看到数据生成的规则
+2. 节省传输带宽，例如想生成一万条数据，规则只是10,000这个数字，而实际数据却是真的一万条啊。
+```
