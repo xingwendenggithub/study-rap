@@ -38,6 +38,7 @@
     * [路径和请求参数](#路径和请求参数)
     * [响应数据结构](#响应数据结构)
     * [EXAMPLE](#example)
+   * [API3：获取一整个RAP项目的文档JSON数据（推荐）](#api3)
 * [常见问题](#常见问题)
   * [如何导入JSON到请求参数](#如何导入json到请求参数)
   * [项目路由有什么用？](#项目路由有什么用)
@@ -394,6 +395,19 @@ http://{domainName}/api/querySchema.do?actionId={actionId}&ver={ver}&projectId={
 ```json
 {"schema":{"id":2024,"$schema":"http://json-schema.org/draft-04/schema","properties":{"resParam":{"id":38393,"title":"某响应参数","description":"","format":"MOCKJS||","required":false,"type":"number"},"a":{"id":38392,"title":"","description":"","format":"MOCKJS||","required":false,"type":""}},"required":"false","type":"object"},"code":200,"msg":""}
 ```
+f
+
+#### 路径和参数
+
+```javascript
+http://{domainName}/api/queryRAPModel.do?projectId={projectId}
+```
+
+其中
+
+- `{projectId}`为项目的ID，在RAP文档URL中可以看到
+
+
 
 ## 常见问题
 
