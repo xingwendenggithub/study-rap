@@ -41,6 +41,30 @@
   - [RESTful API的支持](#restful-api%E7%9A%84%E6%94%AF%E6%8C%81)
     - [参数化的请求路径](#%E5%8F%82%E6%95%B0%E5%8C%96%E7%9A%84%E8%AF%B7%E6%B1%82%E8%B7%AF%E5%BE%84)
     - [根据实际传参值决定所匹配接口](#%E6%A0%B9%E6%8D%AE%E5%AE%9E%E9%99%85%E4%BC%A0%E5%8F%82%E5%80%BC%E5%86%B3%E5%AE%9A%E6%89%80%E5%8C%B9%E9%85%8D%E6%8E%A5%E5%8F%A3)
+- [开放API](#%E5%BC%80%E6%94%BEapi)
+  - [API1：返回RAP项目的模型数据，到接口层级。](#api1%EF%BC%9A%E8%BF%94%E5%9B%9Erap%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%A8%A1%E5%9E%8B%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%88%B0%E6%8E%A5%E5%8F%A3%E5%B1%82%E7%BA%A7%E3%80%82)
+    - [路径和请求参数](#%E8%B7%AF%E5%BE%84%E5%92%8C%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
+    - [响应数据结构](#%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
+    - [EXAMPLE](#example)
+  - [API2：返回具体一个接口的JSON Schema接口详情](#api2%EF%BC%9A%E8%BF%94%E5%9B%9E%E5%85%B7%E4%BD%93%E4%B8%80%E4%B8%AA%E6%8E%A5%E5%8F%A3%E7%9A%84json-schema%E6%8E%A5%E5%8F%A3%E8%AF%A6%E6%83%85)
+    - [路径和请求参数](#%E8%B7%AF%E5%BE%84%E5%92%8C%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0-1)
+    - [响应数据结构](#%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1)
+    - [EXAMPLE](#example-1)
+    - [路径和参数](#%E8%B7%AF%E5%BE%84%E5%92%8C%E5%8F%82%E6%95%B0)
+  - [API2：返回具体一个接口的JSON Schema接口详情](#api2%EF%BC%9A%E8%BF%94%E5%9B%9E%E5%85%B7%E4%BD%93%E4%B8%80%E4%B8%AA%E6%8E%A5%E5%8F%A3%E7%9A%84json-schema%E6%8E%A5%E5%8F%A3%E8%AF%A6%E6%83%85-1)
+  - [API3：获取一整个RAP项目的文档JSON数据（推荐）](#api3%EF%BC%9A%E8%8E%B7%E5%8F%96%E4%B8%80%E6%95%B4%E4%B8%AArap%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%96%87%E6%A1%A3json%E6%95%B0%E6%8D%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89)
+    - [链接](#%E9%93%BE%E6%8E%A5)
+    - [参数](#%E5%8F%82%E6%95%B0)
+  - [API4：获取白名单](#api4%EF%BC%9A%E8%8E%B7%E5%8F%96%E7%99%BD%E5%90%8D%E5%8D%95)
+    - [链接](#%E9%93%BE%E6%8E%A5-1)
+    - [参数](#%E5%8F%82%E6%95%B0-1)
+  - [API5: 校验接口](#api5-%E6%A0%A1%E9%AA%8C%E6%8E%A5%E5%8F%A3)
+    - [参数](#%E5%8F%82%E6%95%B0-2)
+- [常见问题](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
+  - [如何导入JSON到请求参数](#%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5json%E5%88%B0%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
+  - [项目路由有什么用？](#%E9%A1%B9%E7%9B%AE%E8%B7%AF%E7%94%B1%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F)
+  - [我使用的AngularJS如何使用RAP插件？](#%E6%88%91%E4%BD%BF%E7%94%A8%E7%9A%84angularjs%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8rap%E6%8F%92%E4%BB%B6%EF%BC%9F)
+  - [有办法让RAP服务直接返回MockJS数据，而不是MockJS模板吗？](#%E6%9C%89%E5%8A%9E%E6%B3%95%E8%AE%A9rap%E6%9C%8D%E5%8A%A1%E7%9B%B4%E6%8E%A5%E8%BF%94%E5%9B%9Emockjs%E6%95%B0%E6%8D%AE%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AFmockjs%E6%A8%A1%E6%9D%BF%E5%90%97%EF%BC%9F)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -334,6 +358,7 @@ RESTFul API经常根据具体参数值决定接口，例如下面两个接口的
 ```
 http://www.taobao.com/getREST?{path}=delete  // 删除接口
 http://www.taobao.com/getREST?{path}=update  // 更新接口
+```
 
 ## 开放API
 
