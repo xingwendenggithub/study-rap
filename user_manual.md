@@ -1,3 +1,57 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Create your account](#create-your-account)
+  - [Login and register](#login-and-register)
+  - [Create project](#create-project)
+  - [Manage organizations](#manage-organizations)
+- [Document Editing](#document-editing)
+  - [Workspace](#workspace)
+  - [Structure of interface document](#structure-of-interface-document)
+  - [Save your work](#save-your-work)
+- [Front-End MOCK tool](#front-end-mock-tool)
+  - [Import RAP plugin](#import-rap-plugin)
+  - [Mock Rules](#mock-rules)
+  - [Mock Tags Details](#mock-tags-details)
+    - [Show/Hide](#showhide)
+    - [MockJS Rules in RAP](#mockjs-rules-in-rap)
+    - [Escaptions](#escaptions)
+    - [Dynamically generate MockJS template by request parameters.](#dynamically-generate-mockjs-template-by-request-parameters)
+  - [Mock plugin](#mock-plugin)
+    - [Import the plugin](#import-the-plugin)
+    - [RAP Mock Plugin API](#rap-mock-plugin-api)
+      - [Set blacklist](#set-blacklist)
+      - [Set whitelist](#set-whitelist)
+      - [get current mode](#get-current-mode)
+      - [set mode](#set-mode)
+  - [NodeJS Plugin](#nodejs-plugin)
+- [Back-End tools](#back-end-tools)
+  - [How to entered?](#how-to-entered)
+- [Test in automation](#test-in-automation)
+- [RAP Short Cuts](#rap-short-cuts)
+- [Document edit advanced skills](#document-edit-advanced-skills)
+  - [URL grammer](#url-grammer)
+  - [Outer structure control](#outer-structure-control)
+    - [Using statements(@deprecated)](#using-statements@deprecated)
+    - [Using action edit form](#using-action-edit-form)
+  - [RESTful API support](#restful-api-support)
+- [Open API](#open-api)
+  - [API1：Return RAP project model data. (from project to action)](#api1%EF%BC%9Areturn-rap-project-model-data-from-project-to-action)
+    - [Path and request parameters](#path-and-request-parameters)
+    - [Response data structure](#response-data-structure)
+    - [EXAMPLE](#example)
+  - [API2：return detail data of specified action](#api2%EF%BC%9Areturn-detail-data-of-specified-action)
+    - [Path and request parameters](#path-and-request-parameters-1)
+    - [Response data structure](#response-data-structure-1)
+    - [EXAMPLE](#example-1)
+- [Common issues](#common-issues)
+  - [How to share data between different RAP projects?](#how-to-share-data-between-different-rap-projects)
+  - [How to use RAP plugin in AngularJS?](#how-to-use-rap-plugin-in-angularjs)
+  - [Any way to let MOCK service returns MockJS data, not MockJS rule templates?](#any-way-to-let-mock-service-returns-mockjs-data-not-mockjs-rule-templates)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 <!-- toc -->
 

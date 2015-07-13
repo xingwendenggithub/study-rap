@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [什么是RAP?](#%E4%BB%80%E4%B9%88%E6%98%AFrap)
+- [RAP的特色](#rap%E7%9A%84%E7%89%B9%E8%89%B2)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 RAP是一个GUI的WEB接口管理工具。在RAP中，您可定义接口的URL、请求&响应细节格式等等。通过分析这些数据，RAP提供MOCK服务、测试服务等自动化工具。RAP同时提供大量企业级功能，帮助企业和团队高效的工作。
 
 什么是RAP?

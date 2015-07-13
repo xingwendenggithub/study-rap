@@ -1,3 +1,14 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [上手视频](#%E4%B8%8A%E6%89%8B%E8%A7%86%E9%A2%91)
+- [RAP学习中心](#rap%E5%AD%A6%E4%B9%A0%E4%B8%AD%E5%BF%83)
+- [导航](#%E5%AF%BC%E8%88%AA)
+- [技术支持](#%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 [Switch to English](home)
 
 欢迎来到RAP Wiki! **遇到问题时**，可以先试试搜索下[issues](http://github.com/thx/RAP/issues)

@@ -1,3 +1,39 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [需求概述](#%E9%9C%80%E6%B1%82%E6%A6%82%E8%BF%B0)
+- [进度 & 分工 & 排期](#%E8%BF%9B%E5%BA%A6-&-%E5%88%86%E5%B7%A5-&-%E6%8E%92%E6%9C%9F)
+  - [规范约束集](#%E8%A7%84%E8%8C%83%E7%BA%A6%E6%9D%9F%E9%9B%86)
+  - [接口模板集](#%E6%8E%A5%E5%8F%A3%E6%A8%A1%E6%9D%BF%E9%9B%86)
+  - [字段模板集](#%E5%AD%97%E6%AE%B5%E6%A8%A1%E6%9D%BF%E9%9B%86)
+  - [BPA规范接入 @Bosn](#bpa%E8%A7%84%E8%8C%83%E6%8E%A5%E5%85%A5-@bosn)
+  - [RAP Open API @Bosn](#rap-open-api-@bosn)
+- [需求详细设计](#%E9%9C%80%E6%B1%82%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1)
+  - [规范约束集 @Bosn](#%E8%A7%84%E8%8C%83%E7%BA%A6%E6%9D%9F%E9%9B%86-@bosn)
+    - [规范约束集管理入口](#%E8%A7%84%E8%8C%83%E7%BA%A6%E6%9D%9F%E9%9B%86%E7%AE%A1%E7%90%86%E5%85%A5%E5%8F%A3)
+- [```](#)
+- [-             名称              -       操作     -](#--------------%E5%90%8D%E7%A7%B0----------------------%E6%93%8D%E4%BD%9C------)
+- [-             错误码            -     修改 删除  -](#--------------%E9%94%99%E8%AF%AF%E7%A0%81------------------%E4%BF%AE%E6%94%B9-%E5%88%A0%E9%99%A4---)
+- [-             日期规范          -     修改 删除  -](#--------------%E6%97%A5%E6%9C%9F%E8%A7%84%E8%8C%83----------------%E4%BF%AE%E6%94%B9-%E5%88%A0%E9%99%A4---)
+- [-             人民币规范        -     修改 删除  -](#--------------%E4%BA%BA%E6%B0%91%E5%B8%81%E8%A7%84%E8%8C%83--------------%E4%BF%AE%E6%94%B9-%E5%88%A0%E9%99%A4---)
+    - [规范约束集管理界面](#%E8%A7%84%E8%8C%83%E7%BA%A6%E6%9D%9F%E9%9B%86%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2)
+  - [接口模板集 @重鱼](#%E6%8E%A5%E5%8F%A3%E6%A8%A1%E6%9D%BF%E9%9B%86-@%E9%87%8D%E9%B1%BC)
+    - [接口模板集入口](#%E6%8E%A5%E5%8F%A3%E6%A8%A1%E6%9D%BF%E9%9B%86%E5%85%A5%E5%8F%A3)
+    - [接口模板集管理页面](#%E6%8E%A5%E5%8F%A3%E6%A8%A1%E6%9D%BF%E9%9B%86%E7%AE%A1%E7%90%86%E9%A1%B5%E9%9D%A2)
+    - [项目创造 及 接口创建 流程](#%E9%A1%B9%E7%9B%AE%E5%88%9B%E9%80%A0-%E5%8F%8A-%E6%8E%A5%E5%8F%A3%E5%88%9B%E5%BB%BA-%E6%B5%81%E7%A8%8B)
+  - [字段模板集 @重鱼](#%E5%AD%97%E6%AE%B5%E6%A8%A1%E6%9D%BF%E9%9B%86-@%E9%87%8D%E9%B1%BC)
+  - [BPA规范接入](#bpa%E8%A7%84%E8%8C%83%E6%8E%A5%E5%85%A5)
+  - [RAP Open API](#rap-open-api)
+- [技术详细设计](#%E6%8A%80%E6%9C%AF%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1)
+- [界面&交互设计](#%E7%95%8C%E9%9D%A2&%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1)
+  - [交互设计](#%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1)
+    - [首页](#%E9%A6%96%E9%A1%B5)
+    - [团队项目](#%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE)
+    - [模板集](#%E6%A8%A1%E6%9D%BF%E9%9B%86)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 <!-- toc -->
 

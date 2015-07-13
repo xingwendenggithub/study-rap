@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [What is RAP?](#what-is-rap)
+- [RAP's feature](#raps-feature)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 RAP is a GUI web interface structure management system. In RAP, you can define the URL, response/request detail format, etc. By analyzing these data, RAP provides MOCK service, test service, etc. RAP also supplys lots of enterpise-level management tools, help enterprise and team work efficiently.
 
 
