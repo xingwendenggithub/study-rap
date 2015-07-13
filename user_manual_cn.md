@@ -39,6 +39,8 @@
     * [响应数据结构](#响应数据结构)
     * [EXAMPLE](#example)
    * [API3：获取一整个RAP项目的文档JSON数据（推荐）](#api3)
+   * [API4：获取白名单](#api4)
+   * [API5: 校验接口](#api5)
 * [常见问题](#常见问题)
   * [如何导入JSON到请求参数](#如何导入json到请求参数)
   * [项目路由有什么用？](#项目路由有什么用)
@@ -407,6 +409,43 @@ http://{domainName}/api/queryRAPModel.do?projectId={projectId}
 
 - `{projectId}`为项目的ID，在RAP文档URL中可以看到
 
+
+### API2：返回具体一个接口的JSON Schema接口详情
+
+
+### API3：获取一整个RAP项目的文档JSON数据（推荐）
+
+#### 链接
+
+```
+http://{domainName}/api/queryRAPModel.do?projectId={projectId}
+```
+
+#### 参数
+* {projectId} 项目ID
+
+
+### API4：获取白名单
+
+#### 链接
+
+```
+http://{domainName}/mock/getWhiteList.do?projectId={projectId}
+```
+
+#### 参数
+
+* {projectId} 项目ID
+
+### API5: 校验接口
+
+```
+http://{domainName}/mock/validateAPI/{relativePath}
+```
+
+#### 参数
+
+* {relativePath} 相对路径，与/mockjs/类似。
 
 
 ## 常见问题
