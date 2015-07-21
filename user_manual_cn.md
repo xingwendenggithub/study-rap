@@ -1,4 +1,4 @@
-# RAP说明书
+# RAP用户手册
 
 `更新时间：2015/7/21`
 
@@ -14,26 +14,19 @@
   - [工作区](#%E5%B7%A5%E4%BD%9C%E5%8C%BA)
   - [接口文档的结构](#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E7%9A%84%E7%BB%93%E6%9E%84)
   - [文档保存](#%E6%96%87%E6%A1%A3%E4%BF%9D%E5%AD%98)
-- [前端Mock工具](#%E5%89%8D%E7%AB%AFmock%E5%B7%A5%E5%85%B7)
-  - [引入插件](#%E5%BC%95%E5%85%A5%E6%8F%92%E4%BB%B6)
-  - [Mock规则](#mock%E8%A7%84%E5%88%99)
-  - [Mock规则填写示范](#mock%E8%A7%84%E5%88%99%E5%A1%AB%E5%86%99%E7%A4%BA%E8%8C%83)
-  - [Mock标签的使用](#mock%E6%A0%87%E7%AD%BE%E7%9A%84%E4%BD%BF%E7%94%A8)
-  - [Mock插件](#mock%E6%8F%92%E4%BB%B6)
-  - [NodeJS插件](#nodejs%E6%8F%92%E4%BB%B6)
-- [后端接口控制台](#%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E6%8E%A7%E5%88%B6%E5%8F%B0)
-  - [如何进入控制台](#%E5%A6%82%E4%BD%95%E8%BF%9B%E5%85%A5%E6%8E%A7%E5%88%B6%E5%8F%B0)
-- [自动化测试](#%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95)
-- [RAP 快捷键](#rap-%E5%BF%AB%E6%8D%B7%E9%94%AE)
-- [接口文档编辑进阶](#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E8%BF%9B%E9%98%B6)
-  - [接口文档请求链接语法](#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E8%AF%B7%E6%B1%82%E9%93%BE%E6%8E%A5%E8%AF%AD%E6%B3%95)
-  - [最外层为数组的接口](#%E6%9C%80%E5%A4%96%E5%B1%82%E4%B8%BA%E6%95%B0%E7%BB%84%E7%9A%84%E6%8E%A5%E5%8F%A3)
-  - [RESTful API的支持](#restful-api%E7%9A%84%E6%94%AF%E6%8C%81)
+  - [RAP快捷键](#rap%E5%BF%AB%E6%8D%B7%E9%94%AE)
+  - [接口文档编辑进阶](#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E8%BF%9B%E9%98%B6)
+- [前端工具](#%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7)
+  - [前端Mock数据生成](#%E5%89%8D%E7%AB%AFmock%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90)
+- [后端工具](#%E5%90%8E%E7%AB%AF%E5%B7%A5%E5%85%B7)
+  - [后端接口控制台Page Tester](#%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E6%8E%A7%E5%88%B6%E5%8F%B0page-tester)
+- [测试工具](#%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7)
+  - [自动化测试](#%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95)
 - [开放API](#%E5%BC%80%E6%94%BEapi)
   - [API1：返回RAP项目的模型数据，到接口层级。](#api1%EF%BC%9A%E8%BF%94%E5%9B%9Erap%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%A8%A1%E5%9E%8B%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%88%B0%E6%8E%A5%E5%8F%A3%E5%B1%82%E7%BA%A7%E3%80%82)
-  - [API2：获取一整个RAP项目的文档JSON数据（推荐）](#api2%EF%BC%9A%E8%8E%B7%E5%8F%96%E4%B8%80%E6%95%B4%E4%B8%AArap%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%96%87%E6%A1%A3json%E6%95%B0%E6%8D%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89)
+  - [API2：获取JSON格式的RAP接口文档数据](#api2%EF%BC%9A%E8%8E%B7%E5%8F%96json%E6%A0%BC%E5%BC%8F%E7%9A%84rap%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E6%95%B0%E6%8D%AE)
   - [API3：获取项目白名单（所有接口路径列表）](#api3%EF%BC%9A%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE%E7%99%BD%E5%90%8D%E5%8D%95%EF%BC%88%E6%89%80%E6%9C%89%E6%8E%A5%E5%8F%A3%E8%B7%AF%E5%BE%84%E5%88%97%E8%A1%A8%EF%BC%89)
-  - [API4: 校验真实数据的正确性](#api4-%E6%A0%A1%E9%AA%8C%E7%9C%9F%E5%AE%9E%E6%95%B0%E6%8D%AE%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%80%A7)
+  - [API4：校验真实数据的正确性](#api4%EF%BC%9A%E6%A0%A1%E9%AA%8C%E7%9C%9F%E5%AE%9E%E6%95%B0%E6%8D%AE%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%80%A7)
   - [API5: 通过Open API修改Mock规则（接口级）](#api5-%E9%80%9A%E8%BF%87open-api%E4%BF%AE%E6%94%B9mock%E8%A7%84%E5%88%99%EF%BC%88%E6%8E%A5%E5%8F%A3%E7%BA%A7%EF%BC%89)
 - [常见问题](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
   - [如何导入JSON到请求参数](#%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5json%E5%88%B0%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
@@ -98,11 +91,81 @@
 
 - `接口文档导出` 您也能通过 `导出文档` 功能将接口文档以Word文件方式导出（Mac下请修改后缀名为html）。
 
-## 前端Mock工具
+### RAP快捷键
+
+- `Alt + F` 工作区搜索，候选列表出现时可通过上、下、回车键操作
+- `Ctrl + Enter` 位于参数编辑时，根据当前行的参数标识或参数名称自动补全
+- `Tab` 位于参数编辑时，自动切换到下一个位置
+- `Shift + Tab` 位于参数编辑时，自动切换到上一个位置
+
+### 接口文档编辑进阶
+
+#### 接口文档请求链接语法
+
+##### 自定义JSONP的callback函数名
+`[callback]` 表示参数`callback`会用作JSONP的回调key，若实际请求为getItem?callback=foo，则返回结果为:foo({...});
+```
+http://www.taobao.com/getItem?[callback]=foo
+```
+
+##### RESTFul API根据实际传参值决定所匹配接口
+RESTFul API经常根据具体参数值决定接口，例如下面两个接口的路径是一样的，只是path传参不同。
+
+默认情况下RAP会根据`相对路径`去匹配接口，为了在匹配接口时考虑参数的`值`，需要在接口的请求链接中，将该参数用{path}标记出来，并赋值，这样MOCK工具在匹配该接口时，会根据参数path的值来匹配到正确的接口。
+```
+http://www.taobao.com/getREST?{path}=delete  // 删除接口
+http://www.taobao.com/getREST?{path}=update  // 更新接口
+```
+
+#### 最外层为数组的接口
+
+##### 指令集(@deprecated)
+需要在接口描述的开头增加一条指令：@type=array_map;@length=1
+表示返回的最外层结构是数组，长度是1。
+
+##### 表单选项
+在编辑接口详情信息表单时，下方有"返回格式"选项。
+但数组长度仍然需通过@length指令控制。
+
+#### RESTful API的支持
+
+##### 参数化的请求路径
+一些常见的RESTful API，如：www.example.com/data/100/query 请在RAP的请求链接中填写：
+
+```bash
+www.example/data/:id/query
+```
+这里:id会匹配任意的`数字`
+
+对于复杂的情况，如：www.example.com/biz1432/query 可以使用正则写法：
+
+```bash
+reg:www.example/biz[0-9]{4}/query
+```
+
+这里MOCK服务会根据正则来匹配正确的接口。
+
+具体例子请参见项目：[RESTful API支持](http://{{domainName}}/workspace/myWorkspace.action?projectId=265&mock=true)
+
+
+##### 根据实际传参值决定所匹配接口
+
+RESTFul API经常根据具体参数值决定接口，例如下面两个接口的路径是一样的，只是path传参不同。
+
+默认情况下RAP会根据`相对路径`去匹配接口，为了在匹配接口时考虑参数的`值`，需要在接口的请求链接中，将该参数用{path}标记出来，并赋值，这样MOCK工具在匹配该接口时，会根据参数path的值来匹配到正确的接口。
+
+```
+http://www.taobao.com/getREST?{path}=delete  // 删除接口
+http://www.taobao.com/getREST?{path}=update  // 更新接口
+```
+
+## 前端工具
+
+### 前端Mock数据生成
 
 前端Mock工具可以分析接口文档的结构，来生成自测用的数据。建议在查看文档前，看一看视频教程里的Mock部分。
 
-### 引入插件
+#### 引入插件
 
 您只需引入一行插件代码即可轻松实现RAP Mock的无缝衔接。详见Mock插件部分。
 
@@ -112,7 +175,7 @@
 
 为保证RAP插件正确拦截到基础库，请确保RAP插件紧挨着KISSY/jQuery库加载到页面中。
 
-### Mock规则
+#### Mock.js规则
 
 默认，RAP会为不同数据类型生成默认的数据，您也可以通过手动编写标签实现更好的Mock行为控制。例如字段 id 需要自增，您可以使用MockJS语法:
 
@@ -125,23 +188,23 @@ id|+1     @mock=100
 
 具体Mock规则如何填写，请访问<a href="http://mockjs.com" target="_blank">MockJS文档</a>，也可参考RAP平台中MockJS对接的例子。
 
-### Mock规则填写示范
+#### Mock规则填写示范
 
 下面为一个较为典型的RAP接口文档中，Mock规则填写的示范，请参考：
 
-#### 接口文档中的Mock规则
+##### 接口文档中的Mock规则
 ![](https://img.alicdn.com/tps/TB16V7iIFXXXXcBXFXXXXXXXXXX.png)
 
-#### 最终生成的Mock数据
+##### 最终生成的Mock数据
 ![](https://img.alicdn.com/tps/TB1ADwaIFXXXXamaXXXXXXXXXXX.png)
 
-### Mock标签的使用
+#### Mock标签的使用
 
-#### 显示与隐藏
+##### 显示与隐藏
 
 注意！！！在编辑Mock规则时，请点击右上角的 `Mock`按钮来显示Mock信息 ，为了接口文档的阅读体验，`默认Mock信息会被隐藏`。
 
-#### 书写规则
+##### 书写规则
 
 在备注里，Mock标签和普通的备注需要用分号隔开，比如：
 
@@ -151,7 +214,7 @@ id|+1     @mock=100
 用户ID;@mock=123
 ```
 
-#### 转义
+##### 转义
 
 ```bash
 变量名            备注                   结果
@@ -161,7 +224,7 @@ noEscapeDemo     @{mock}="123"       "noEscapeDemo" : ""1,2,3"" // 语法错误
 默认所有@mock的值会被转义，若不需要转义，请以 **@{mock}** 代替。
 
 
-#### 根据请求参数来动态生成MockJS模板
+##### 根据请求参数来动态生成MockJS模板
 
 通过${page}这样的语法，RAP会根据请求参数的值替换掉${page}对应的位置，page是参数名。例如：
 
@@ -193,9 +256,9 @@ noEscapeDemo     @{mock}="123"       "noEscapeDemo" : ""1,2,3"" // 语法错误
 表示在请求参数没有page时，默认等价于@mock=10
 
 
-### Mock插件
+#### Mock插件
 
-#### 插件的引入
+##### 插件的引入
 
 RAP提供了 `Mock插件`（暂时仅支持Kissy和jQuery），使用只需要一步。
 
@@ -219,17 +282,17 @@ mode不同值的具体含义如下:
 
 **白名单会根据RAP中已经编辑的接口文档，自动配置，RAP中未录入的接口不会做拦截**
 
-#### 插件提供的JS API
+##### 插件提供的JS API
 
 您也可以通过调用RAP给出的JS API，手动设置黑名单、白名单及查看、设置工作模式
 
-##### 设置黑名单
+###### 设置黑名单
 
 ```bash
 RAP.setBlackList(arr);
 ```
 
-##### 设置白名单
+###### 设置白名单
 
 ```bash
 RAP.setWhiteList(arr);
@@ -237,26 +300,30 @@ RAP.setWhiteList(arr);
 
 其中arr可以包含匹配字符串，或正则对象，例：['test', /test/g]
 
-##### 查看当前模式
+###### 查看当前模式
 
 ```bash
 RAP.getMode();
 ```
 
-##### 设置当前模式
+###### 设置当前模式
 
 ```bash
 RAP.setMode(1);
 ```
-### NodeJS插件
+#### NodeJS插件
 
 [插件地址](https://www.npmjs.org/package/rap-node-plugin)
 
 具体文档、安装方法请查看该链接。
 
-## 后端接口控制台
+## 后端工具
 
-### 如何进入控制台
+### 后端接口控制台Page Tester
+
+后端工具目前还不成熟，大家有好的提议请在Issues中发帖哦！
+
+#### 如何进入控制台
 
 控制台以RAP文档的`页面`为单位，通过下图中标记的ICON可进入控制台。
 
@@ -268,76 +335,12 @@ RAP.setMode(1);
 2. 校验功能，对实际后端输出是否符合接口规范做校验，提示缺少、多余的字段
 3. 日志功能，提供日志分析，时间记录等
 
-## 自动化测试
+## 测试工具
 
-RAP开放了Mock规则的API，QA或对此有需求的同学可以通过RAP API去访问和编辑Mock规则，为自动化测试提供便利。
+### 自动化测试
 
+RAP开放了Mock规则的API，QA或对此有需求的同学可以通过RAP API去访问和编辑Mock规则，为自动化测试提供便利。目前测试工具还不够完善，欢迎大家在Issues中提出自己的想法。
 
-## RAP 快捷键
-
-- `Alt + F` 工作区搜索，候选列表出现时可通过上、下、回车键操作
-- `Ctrl + Enter` 位于参数编辑时，根据当前行的参数标识或参数名称自动补全
-- `Tab` 位于参数编辑时，自动切换到下一个位置
-- `Shift + Tab` 位于参数编辑时，自动切换到上一个位置
-
-## 接口文档编辑进阶
-
-### 接口文档请求链接语法
-
-#### 自定义JSONP的callback函数名
-`[callback]` 表示参数`callback`会用作JSONP的回调key，若实际请求为getItem?callback=foo，则返回结果为:foo({...});
-```
-http://www.taobao.com/getItem?[callback]=foo
-```
-
-#### RESTFul API根据实际传参值决定所匹配接口
-RESTFul API经常根据具体参数值决定接口，例如下面两个接口的路径是一样的，只是path传参不同。
-
-默认情况下RAP会根据`相对路径`去匹配接口，为了在匹配接口时考虑参数的`值`，需要在接口的请求链接中，将该参数用{path}标记出来，并赋值，这样MOCK工具在匹配该接口时，会根据参数path的值来匹配到正确的接口。
-```
-http://www.taobao.com/getREST?{path}=delete  // 删除接口
-http://www.taobao.com/getREST?{path}=update  // 更新接口
-```
-
-### 最外层为数组的接口
-
-#### 指令集(@deprecated)
-需要在接口描述的开头增加一条指令：@type=array_map;@length=1
-表示返回的最外层结构是数组，长度是1。
-
-#### 表单选项
-在编辑接口详情信息表单时，下方有"返回格式"选项。
-但数组长度仍然需通过@length指令控制。
-
-### RESTful API的支持
-
-#### 参数化的请求路径
-一些常见的RESTful API，如：www.example.com/data/100/query 请在RAP的请求链接中填写：
-
-```bash
-www.example/data/:id/query
-```
-这里:id会匹配任意的`数字`
-
-对于复杂的情况，如：www.example.com/biz1432/query 可以使用正则写法：
-
-```bash
-reg:www.example/biz[0-9]{4}/query
-```
-
-这里MOCK服务会根据正则来匹配正确的接口。
-
-具体例子请参见项目：[RESTful API支持](http://{{domainName}}/workspace/myWorkspace.action?projectId=265&mock=true)
-
-
-#### 根据实际传参值决定所匹配接口
-RESTFul API经常根据具体参数值决定接口，例如下面两个接口的路径是一样的，只是path传参不同。
-
-默认情况下RAP会根据`相对路径`去匹配接口，为了在匹配接口时考虑参数的`值`，需要在接口的请求链接中，将该参数用{path}标记出来，并赋值，这样MOCK工具在匹配该接口时，会根据参数path的值来匹配到正确的接口。
-```
-http://www.taobao.com/getREST?{path}=delete  // 删除接口
-http://www.taobao.com/getREST?{path}=update  // 更新接口
-```
 
 ## 开放API
 
@@ -370,7 +373,7 @@ http://{domainName}/api/queryModel.do?projectId={projectId}&ver={ver}
 ```
 
 
-### API2：获取一整个RAP项目的文档JSON数据（推荐）
+### API2：获取JSON格式的RAP接口文档数据
 
 #### 链接
 
@@ -394,7 +397,7 @@ http://{domainName}/mock/getWhiteList.do?projectId={projectId}
 
 * {projectId} 项目ID
 
-### API4: 校验真实数据的正确性
+### API4：校验真实数据的正确性
 
 #### URL
 ```
@@ -586,9 +589,10 @@ http://{ipAddress}:8001/mockjsauto/43/x?
 
 ### 如何导入JSON到请求参数
 
-- 1). 给你的数据最外层加一层，比如你现在的数据是{data}，修改为：{"json":{data}}
-- 2). 导入到响应参数; 
-- 3). 新增一个请求参数，在第一列输入json(也就是同名)后`ctrl + enter`来执行一键复制;4). 删掉响应参数里的json参数。
+1. 给你的数据最外层加一层，比如你现在的数据是`{data}`，修改为：`{"json":{data}}`
+1. 导入到响应参数; 
+1. 新增一个请求参数，在第一列输入json(也就是同名)后`ctrl + enter`来执行一键复制;
+1. 删掉响应参数里的json参数。
 
 类似的，如果你不想wrap到一个参数里，一样是导入到响应参数，然后需要copy哪个就输入相同的变量名后`ctrl+enter`复制过去就好。
 
