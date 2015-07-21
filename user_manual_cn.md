@@ -1,31 +1,25 @@
+# RAP说明书
+
+`更新时间：2015/7/21`
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [RAP介绍 & 视频教程](#rap%E4%BB%8B%E7%BB%8D-&-%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B)
-- [创建文档](#%E5%88%9B%E5%BB%BA%E6%96%87%E6%A1%A3)
-  - [登录 & 注册](#%E7%99%BB%E5%BD%95-&-%E6%B3%A8%E5%86%8C)
+
+- [创建RAP文档](#%E5%88%9B%E5%BB%BArap%E6%96%87%E6%A1%A3)
+  - [登录、注册](#%E7%99%BB%E5%BD%95%E3%80%81%E6%B3%A8%E5%86%8C)
   - [创建项目](#%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE)
   - [管理项目组织](#%E7%AE%A1%E7%90%86%E9%A1%B9%E7%9B%AE%E7%BB%84%E7%BB%87)
 - [文档编辑](#%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91)
-  - [工作区概念](#%E5%B7%A5%E4%BD%9C%E5%8C%BA%E6%A6%82%E5%BF%B5)
+  - [工作区](#%E5%B7%A5%E4%BD%9C%E5%8C%BA)
   - [接口文档的结构](#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E7%9A%84%E7%BB%93%E6%9E%84)
-  - [保存文档](#%E4%BF%9D%E5%AD%98%E6%96%87%E6%A1%A3)
+  - [文档保存](#%E6%96%87%E6%A1%A3%E4%BF%9D%E5%AD%98)
 - [前端Mock工具](#%E5%89%8D%E7%AB%AFmock%E5%B7%A5%E5%85%B7)
   - [引入插件](#%E5%BC%95%E5%85%A5%E6%8F%92%E4%BB%B6)
   - [Mock规则](#mock%E8%A7%84%E5%88%99)
+  - [Mock规则填写示范](#mock%E8%A7%84%E5%88%99%E5%A1%AB%E5%86%99%E7%A4%BA%E8%8C%83)
   - [Mock标签的使用](#mock%E6%A0%87%E7%AD%BE%E7%9A%84%E4%BD%BF%E7%94%A8)
-    - [显示与隐藏](#%E6%98%BE%E7%A4%BA%E4%B8%8E%E9%9A%90%E8%97%8F)
-    - [书写规则](#%E4%B9%A6%E5%86%99%E8%A7%84%E5%88%99)
-    - [转义](#%E8%BD%AC%E4%B9%89)
-    - [根据请求参数来动态生成MockJS模板](#%E6%A0%B9%E6%8D%AE%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E6%9D%A5%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90mockjs%E6%A8%A1%E6%9D%BF)
   - [Mock插件](#mock%E6%8F%92%E4%BB%B6)
-    - [插件的引入](#%E6%8F%92%E4%BB%B6%E7%9A%84%E5%BC%95%E5%85%A5)
-    - [插件提供的JS API](#%E6%8F%92%E4%BB%B6%E6%8F%90%E4%BE%9B%E7%9A%84js-api)
-      - [设置黑名单](#%E8%AE%BE%E7%BD%AE%E9%BB%91%E5%90%8D%E5%8D%95)
-      - [设置白名单](#%E8%AE%BE%E7%BD%AE%E7%99%BD%E5%90%8D%E5%8D%95)
-      - [查看当前模式](#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E6%A8%A1%E5%BC%8F)
-      - [设置当前模式](#%E8%AE%BE%E7%BD%AE%E5%BD%93%E5%89%8D%E6%A8%A1%E5%BC%8F)
   - [NodeJS插件](#nodejs%E6%8F%92%E4%BB%B6)
 - [后端接口控制台](#%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E6%8E%A7%E5%88%B6%E5%8F%B0)
   - [如何进入控制台](#%E5%A6%82%E4%BD%95%E8%BF%9B%E5%85%A5%E6%8E%A7%E5%88%B6%E5%8F%B0)
@@ -33,33 +27,14 @@
 - [RAP 快捷键](#rap-%E5%BF%AB%E6%8D%B7%E9%94%AE)
 - [接口文档编辑进阶](#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E8%BF%9B%E9%98%B6)
   - [接口文档请求链接语法](#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E8%AF%B7%E6%B1%82%E9%93%BE%E6%8E%A5%E8%AF%AD%E6%B3%95)
-    - [自定义JSONP的callback函数名](#%E8%87%AA%E5%AE%9A%E4%B9%89jsonp%E7%9A%84callback%E5%87%BD%E6%95%B0%E5%90%8D)
-    - [RESTFul API根据实际传参值决定所匹配接口](#restful-api%E6%A0%B9%E6%8D%AE%E5%AE%9E%E9%99%85%E4%BC%A0%E5%8F%82%E5%80%BC%E5%86%B3%E5%AE%9A%E6%89%80%E5%8C%B9%E9%85%8D%E6%8E%A5%E5%8F%A3)
   - [最外层为数组的接口](#%E6%9C%80%E5%A4%96%E5%B1%82%E4%B8%BA%E6%95%B0%E7%BB%84%E7%9A%84%E6%8E%A5%E5%8F%A3)
-    - [指令集(@deprecated)](#%E6%8C%87%E4%BB%A4%E9%9B%86@deprecated)
-    - [表单选项](#%E8%A1%A8%E5%8D%95%E9%80%89%E9%A1%B9)
   - [RESTful API的支持](#restful-api%E7%9A%84%E6%94%AF%E6%8C%81)
-    - [参数化的请求路径](#%E5%8F%82%E6%95%B0%E5%8C%96%E7%9A%84%E8%AF%B7%E6%B1%82%E8%B7%AF%E5%BE%84)
-    - [根据实际传参值决定所匹配接口](#%E6%A0%B9%E6%8D%AE%E5%AE%9E%E9%99%85%E4%BC%A0%E5%8F%82%E5%80%BC%E5%86%B3%E5%AE%9A%E6%89%80%E5%8C%B9%E9%85%8D%E6%8E%A5%E5%8F%A3)
 - [开放API](#%E5%BC%80%E6%94%BEapi)
   - [API1：返回RAP项目的模型数据，到接口层级。](#api1%EF%BC%9A%E8%BF%94%E5%9B%9Erap%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%A8%A1%E5%9E%8B%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%88%B0%E6%8E%A5%E5%8F%A3%E5%B1%82%E7%BA%A7%E3%80%82)
-    - [路径和请求参数](#%E8%B7%AF%E5%BE%84%E5%92%8C%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
-    - [响应数据结构](#%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
-    - [EXAMPLE](#example)
-  - [API2：返回具体一个接口的JSON Schema接口详情](#api2%EF%BC%9A%E8%BF%94%E5%9B%9E%E5%85%B7%E4%BD%93%E4%B8%80%E4%B8%AA%E6%8E%A5%E5%8F%A3%E7%9A%84json-schema%E6%8E%A5%E5%8F%A3%E8%AF%A6%E6%83%85)
-    - [路径和请求参数](#%E8%B7%AF%E5%BE%84%E5%92%8C%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0-1)
-    - [响应数据结构](#%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1)
-    - [EXAMPLE](#example-1)
-    - [路径和参数](#%E8%B7%AF%E5%BE%84%E5%92%8C%E5%8F%82%E6%95%B0)
-  - [API2：返回具体一个接口的JSON Schema接口详情](#api2%EF%BC%9A%E8%BF%94%E5%9B%9E%E5%85%B7%E4%BD%93%E4%B8%80%E4%B8%AA%E6%8E%A5%E5%8F%A3%E7%9A%84json-schema%E6%8E%A5%E5%8F%A3%E8%AF%A6%E6%83%85-1)
-  - [API3：获取一整个RAP项目的文档JSON数据（推荐）](#api3%EF%BC%9A%E8%8E%B7%E5%8F%96%E4%B8%80%E6%95%B4%E4%B8%AArap%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%96%87%E6%A1%A3json%E6%95%B0%E6%8D%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89)
-    - [链接](#%E9%93%BE%E6%8E%A5)
-    - [参数](#%E5%8F%82%E6%95%B0)
-  - [API4：获取白名单](#api4%EF%BC%9A%E8%8E%B7%E5%8F%96%E7%99%BD%E5%90%8D%E5%8D%95)
-    - [链接](#%E9%93%BE%E6%8E%A5-1)
-    - [参数](#%E5%8F%82%E6%95%B0-1)
-  - [API5: 校验接口](#api5-%E6%A0%A1%E9%AA%8C%E6%8E%A5%E5%8F%A3)
-    - [参数](#%E5%8F%82%E6%95%B0-2)
+  - [API2：获取一整个RAP项目的文档JSON数据（推荐）](#api2%EF%BC%9A%E8%8E%B7%E5%8F%96%E4%B8%80%E6%95%B4%E4%B8%AArap%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%96%87%E6%A1%A3json%E6%95%B0%E6%8D%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89)
+  - [API3：获取项目白名单（所有接口路径列表）](#api3%EF%BC%9A%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE%E7%99%BD%E5%90%8D%E5%8D%95%EF%BC%88%E6%89%80%E6%9C%89%E6%8E%A5%E5%8F%A3%E8%B7%AF%E5%BE%84%E5%88%97%E8%A1%A8%EF%BC%89)
+  - [API4: 校验真实数据的正确性](#api4-%E6%A0%A1%E9%AA%8C%E7%9C%9F%E5%AE%9E%E6%95%B0%E6%8D%AE%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%80%A7)
+  - [API5: 通过Open API修改Mock规则（接口级）](#api5-%E9%80%9A%E8%BF%87open-api%E4%BF%AE%E6%94%B9mock%E8%A7%84%E5%88%99%EF%BC%88%E6%8E%A5%E5%8F%A3%E7%BA%A7%EF%BC%89)
 - [常见问题](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
   - [如何导入JSON到请求参数](#%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5json%E5%88%B0%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
   - [项目路由有什么用？](#%E9%A1%B9%E7%9B%AE%E8%B7%AF%E7%94%B1%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F)
@@ -73,47 +48,41 @@
 
 
 
-## RAP介绍 & 视频教程
+该文档详细介绍了RAP的使用方法，初学者建议通过[RAP视频学习中心](http://thx.github.io/RAP/study.html) 观看演示视频，帮助更好的上手。若文档不能解决亲的疑问，请在[Issues](https://github.com/thx/RAP/issues)中发帖，也欢迎关注我的新浪微博`@Bosn`。
 
-<iframe height=498 width=610 src="http://player.youku.com/embed/XNjk5NjMxODA4" frameborder=0 allowfullscreen></iframe>
+## 创建RAP文档
 
-## 创建文档
+### 登录、注册
 
-### 登录 & 注册
-
-目前只支持 `域帐号登录`，域帐号登录后会自动完成新用户注册及登录流程。
-
-后续我们会补充其它帐号的登录方式（例如：RAP注册用户、微博账号、QQ账号等）
+对于阿里内网的同学，建议使用域账号登陆。非阿里的同学，请直接通过右上角的注册按提示完成注册和登陆操作即可。
 
 ### 创建项目
 
-方法一、在我的主页中，点击+快速创建项目
+有两个办法创建项目：
 
-方法二、点击最上方菜单中的切换团队，通过选择团队->业务线的方式去创建项目
+1. 在我的主页点击`+`按钮快速创建新项目
+1. 点击上方菜单中的切换团队，通过选择团队 => 业务线的方式定位到合适的分组，在分组下点击`+`创建该分组下的项目
 
 ### 管理项目组织
 
-一、首先点击上方菜单中的 `团队切换`，选择自己的团队或子公司。这些是由系统管理员预设的。
-
-二、 选择合适的 `业务线`，您也可以在这里管理业务线。
-
-三、进入业务线后，可在合适的 `分组` 下创建自己的项目。您也可以在这里管理自己的分组。
+1. 点击上方菜单中 `团队切换`，选择自己的团队或子公司，这些是由系统管理员预设的。
+1. 选择合适 `业务线`，您也可以在这里管理（添加、编辑）业务线。
+1. 进入业务线后，在合适 `分组` 下创建自己的项目。您也可在这里管理分组。
 
 ## 文档编辑
 
-### 工作区概念
+### 工作区
 
-完成项目创建后，点击项目链接进入`接口文档工作区`。
+完成项目创建后，点击项目链接进入到`接口文档工作区`。
 
 工作区分为以下两种模式：
 
-`查看模式（默认）`：查看模式下，会隐藏编辑UI使界面更方便查看，需要进行改动时只需点击右上角的启用编辑按钮，进入编辑模式。
-
-`编辑模式`：编辑模式下，可根据界面提示完成接口文档的编辑工作。
-
-**首次进入项目系统会自动为您创建默认的第一个模块、页面和请求，请根据需求进行修改。**
+1. `查看模式（默认）`：查看模式下，会隐藏编辑用的UI使界面更易于阅读接口文档信息，需要进行改动时只需点击右上角的`编辑`按钮，进入编辑模式。
+1. `编辑模式`：编辑模式下，可根据界面提示完成接口文档的编辑工作。具体操作方法见视频教程。
 
 ### 接口文档的结构
+
+每个RAP接口文档中的接口，是按照从模块(Tab)、页面、请求的模型去整理的，但这只是系统推荐的整理方式，亲完全可以根据自己的需求来整理，比如把一个页面当做一个模块整理大量的接口也是没问题的。
 
 - `模块 (Module)` 对应工作区不同的Tab，用户可根据喜好进行设置。往往在大项目或接口较多的项目中使用频繁。比如可自己分账户模块、宝贝模块等等...
 - `页面 (Page)` 每个模块下有0至多个页面，RAP中的“页面”是逻辑页面，比如单页应用每一个View都可以算做一个页面，具体如何使用用户根据自己喜好设定即可。
@@ -121,19 +90,21 @@
 - `参数 (Parameter)` 每个请求中有请求参数列表和响应参数列表，参数是可以嵌套参数的，用以描述复杂的Object嵌套结构。
 
 
-### 保存文档
+### 文档保存
 
-- `保存` 完成编辑后，可通过 `快捷保存` 直接完成保存，也可以通过普通的 `保存` 提交一些有用的注释信息。
+- `保存` 完成编辑后，可通过 `闪存` 完成快速保存，也可以通过普通的 `保存` 提交一些有用的注释信息、版本号信息等内容。
 
-- `版本控制` RAP的接口文档不同版本之间可以查看和永久切换。
+- `版本控制` RAP的接口文档不同版本之间可以查看和切换。
 
 - `接口文档导出` 您也能通过 `导出文档` 功能将接口文档以Word文件方式导出（Mac下请修改后缀名为html）。
 
 ## 前端Mock工具
 
+前端Mock工具可以分析接口文档的结构，来生成自测用的数据。建议在查看文档前，看一看视频教程里的Mock部分。
+
 ### 引入插件
 
-RAP会通过分析接口文档自动生成Mock服务，生成动态的模拟数据。您只需引入一行插件代码即可轻松实现RAP Mock的无缝衔接。详见Mock插件部分。
+您只需引入一行插件代码即可轻松实现RAP Mock的无缝衔接。详见Mock插件部分。
 
 通常情况下，引入顺序为: `KISSY/jQuery库` => `RAP插件`
 
@@ -154,11 +125,21 @@ id|+1     @mock=100
 
 具体Mock规则如何填写，请访问<a href="http://mockjs.com" target="_blank">MockJS文档</a>，也可参考RAP平台中MockJS对接的例子。
 
+### Mock规则填写示范
+
+下面为一个较为典型的RAP接口文档中，Mock规则填写的示范，请参考：
+
+#### 接口文档中的Mock规则
+![](https://img.alicdn.com/tps/TB16V7iIFXXXXcBXFXXXXXXXXXX.png)
+
+#### 最终生成的Mock数据
+![](https://img.alicdn.com/tps/TB1ADwaIFXXXXamaXXXXXXXXXXX.png)
+
 ### Mock标签的使用
 
 #### 显示与隐藏
 
-在编辑Mock规则时，请点击右上角的 `Mock`按钮来显示Mock信息 ，为了接口文档的阅读体验，默认Mock信息会被隐藏。
+注意！！！在编辑Mock规则时，请点击右上角的 `Mock`按钮来显示Mock信息 ，为了接口文档的阅读体验，`默认Mock信息会被隐藏`。
 
 #### 书写规则
 
@@ -318,8 +299,6 @@ http://www.taobao.com/getREST?{path}=delete  // 删除接口
 http://www.taobao.com/getREST?{path}=update  // 更新接口
 ```
 
-
-
 ### 最外层为数组的接口
 
 #### 指令集(@deprecated)
@@ -390,53 +369,8 @@ http://{domainName}/api/queryModel.do?projectId={projectId}&ver={ver}
 {"model":{"moduleList":[{"id":518,"pageList":[{"id":738,"interfaceList":[{"id":2024,"desc":"","reqUrl":"a","name":"某请求","reqType":"1"},{"id":2025,"desc":"","reqUrl":"bbb","name":"bbb","reqType":"1"}],"name":"某页面","intro":""}],"name":"某模块（点击编辑后双击修改）","intro":""}],"id":429,"name":"临时项目一会儿删掉不要动","ver":"0.0.0.4","intro":""},"code":200,"msg":""}
 ```
 
-### API2：返回具体一个接口的JSON Schema接口详情
 
-#### 路径和请求参数
-
-```javascript
-http://{domainName}/api/querySchema.do?actionId={actionId}&ver={ver}&projectId={projectId}&type={type}
-```
-
-其中
-
-- `{actionId}`为接口的ID
-- `{ver}`和`{projectId}`均为可选参数，同时出现表示指定某一版本的接口。
-- `{type}`值为request时表示返回请求参数的schema，其它值或不传默认返回响应参数的schema
-- `{domainName}`RAP的域名，与您访问RAP页面中的域名一致
-
-#### 响应数据结构
-
-返回的对象有3个字段，分别是：
-
-- `schema` - 接口的JSON SCHEMA(v4标准)
-- `code` - 错误码，正确返回200
-- `msg` - 错误消息，正确返回空字符串
-
-#### EXAMPLE
-
-链接：`http://{domainName}/api/querySchema.do?projectId=429&actionId=2024&ver=0.0.0.2`
-
-```json
-{"schema":{"id":2024,"$schema":"http://json-schema.org/draft-04/schema","properties":{"resParam":{"id":38393,"title":"某响应参数","description":"","format":"MOCKJS||","required":false,"type":"number"},"a":{"id":38392,"title":"","description":"","format":"MOCKJS||","required":false,"type":""}},"required":"false","type":"object"},"code":200,"msg":""}
-```
-f
-
-#### 路径和参数
-
-```javascript
-http://{domainName}/api/queryRAPModel.do?projectId={projectId}
-```
-
-其中
-
-- `{projectId}`为项目的ID，在RAP文档URL中可以看到
-
-
-### API2：返回具体一个接口的JSON Schema接口详情
-
-
-### API3：获取一整个RAP项目的文档JSON数据（推荐）
+### API2：获取一整个RAP项目的文档JSON数据（推荐）
 
 #### 链接
 
@@ -448,7 +382,7 @@ http://{domainName}/api/queryRAPModel.do?projectId={projectId}
 * {projectId} 项目ID
 
 
-### API4：获取白名单
+### API3：获取项目白名单（所有接口路径列表）
 
 #### 链接
 
@@ -460,16 +394,193 @@ http://{domainName}/mock/getWhiteList.do?projectId={projectId}
 
 * {projectId} 项目ID
 
-### API5: 校验接口
+### API4: 校验真实数据的正确性
+
+#### URL
+```
+http://{domaiName}/validate/{projectId}/{relativePath}?json={jsonToCompare}
+```
+
+#### 输入参数
+* `{relativePath}`为相对路径，与mock服务类似。例如：
+    * `真实后端接口`为：http://xxx/getJson.php，项目ID为334，则
+    * `API验证接口`为：http://{domainName}/validate/334/**getJson.php**.
+* `{jsonToCompare}`为想要必要的JSON数据，一般为真实数据
+* `{projectId}`为项目ID
+
+#### 输出
+
+输出为一个JSON，最外层是对象，包含两个字段：
+* `result` 表示校验结果
+    * `result.left` 表示左边（RAP文档）所产生的Mock数据和右边比较的差异
+    * `result.right` 表示右边（入参JSON字符串）和左边RAP文档比较的差异
+    * 这里之所以区分左边右边，是因为在比较时可能真实数据（右边）少了字段，也可能多了字段，所以需要两边数据相互比较一次，并分别记录在left/right字段下。
+* `resultStr` 表示校验结果的中文提示字符串
+
+```json
+{
+    "result": {
+        "left": [{
+            "type": "LOST",
+            "property": "act_price",
+            "namespace": "obj"
+        },
+        {
+            "type": "LOST",
+            "property": "coupons",
+            "namespace": "obj"
+        }],
+        "right": [{
+            "type": "LOST",
+            "property": "coupxxons",
+            "namespace": "obj"
+        },
+        {
+            "type": "LOST",
+            "property": "acxxt_price",
+            "namespace": "obj"
+        }]
+    },
+    "resultStr": "参数 obj.act_price 缺失\n参数 obj.coupons 缺失\n参数 obj.coupxxons 未在接口文档中未定义。\n参数 obj.acxxt_price 未在接口文档中未定义。"
+}
+```
+
+#### EXAMPLE
+
+##### 测试请求URL
+
+这里在请求里把JSON中的两个字段做了修改，加入了几个XX
 
 ```
-http://{domainName}/mock/validateAPI/{relativePath}
+http://localhost:8001/validate/43/x?json={%22coupxxons%22:[],%22acxxt_price%22:189,%22price%22:40873,%22shop_title%22:%22\u6d4b\u8bd5\u5185\u5bb95y9z%22,%22num%22:32644,%22title%22:%22\u6d4b\u8bd5\u5185\u5bb9bpux%22,%22promotions%22:[],%22num_iid%22:%22\u6d4b\u8bd5\u5185\u5bb92k3r%22,%22pic_url%22:%22\u6d4b\u8bd5\u5185\u5bb95iq5%22,%22desc%22:%22\u6d4b\u8bd5\u5185\u5bb9hbq5%22,%22countdown_sec%22:21553,%22nick%22:%22\u6d4b\u8bd5\u5185\u5bb98519%22,%22wap_detail_url%22:%22\u6d4b\u8bd5\u5185\u5bb90197%22,%22outer_id%22:%22\u6d4b\u8bd5\u5185\u5bb92u8n%22,%22detail_url%22:%22\u6d4b\u8bd5\u5185\u5bb9463m%22,%22earnest%22:85535}
 ```
 
-#### 参数
+##### 返回结果
 
-* {relativePath} 相对路径，与/mockjs/类似。
+```json
+{
+    "result": {
+        "left": [{
+            "type": "LOST",
+            "property": "act_price",
+            "namespace": "obj"
+        },
+        {
+            "type": "LOST",
+            "property": "coupons",
+            "namespace": "obj"
+        }],
+        "right": [{
+            "type": "LOST",
+            "property": "coupxxons",
+            "namespace": "obj"
+        },
+        {
+            "type": "LOST",
+            "property": "acxxt_price",
+            "namespace": "obj"
+        }]
+    },
+    "resultStr": "参数 obj.act_price 缺失\n参数 obj.coupons 缺失\n参数 obj.coupxxons 未在接口文档中未定义。\n参数 obj.acxxt_price 未在接口文档中未定义。"
+}
+```
 
+这里返回了校验结果，在result属性中存放校验结果的对象结构，在resultStr存放提供给你们人类看的提示信息。
+
+### API5: 通过Open API修改Mock规则（接口级）
+
+#### 接口设计
+
+为实现该需求，提供以下接口：
+
+* modify接口，用于修改该项目的接口规则
+    * 地址：http://{domainName}/api/modifyMockRules.do
+    * 输入
+        * rules 规则JSON
+        * actionId 接口ID
+    * 输出（整个是JSON）
+        * isOk 是否成功，true或false
+        * msg 错误信息
+* reset接口，用于重置该项目所有的接口规则
+    * 地址：http://{domainName}/api/resetMockRules.do
+    * 输入
+        * actionId 接口ID
+    * 输出（整个是JSON）
+        * isOk 是否成功，true或false
+        * msg 错误信息
+
+#### 规则语法设计
+
+采用JSON格式。
+
+```javascript
+var rules = {
+    "requestParameterList" : [{
+    	identifier: "customerName", // 不带mock规则的变量名，用于要修改的字段，必填
+    	identifierChange: "customerName|1-2", // 修改后，可省略
+    	remarkChange: "@mock=123" // 修改后的规则参数，可省略
+       parameterList: [{    // 子参数
+           identifier: "id",
+           // ... 
+           // 对象或装有对象的数组，可能无限嵌套下去，通过parameterList连接   
+       }]  
+    }]，
+    "responseParameterList" : []
+}
+```
+
+
+#### 由该API设置的规则如何使用
+出于以下原因，通过该Open API设置的MOCK规则与常规的规则区分开：
+
+1. 自动化测试会经常modify, reset，不应该影响到版本。
+2. 自动化测试不应该干扰开发者自己设置的Mock规则。
+
+因此，用户一般的Mock服务路径为：
+
+```
+http://{domainName}/mockjs/{projectId}/{relativePath}
+```
+
+而由该API设置的规则，生效后访问的Mock服务路径为：
+
+```
+http://{domainName}/mockjsauto/{projectId}/{relativePath}
+```
+
+#### 自动化测试接口(/mockjsauto/)加载规则
+
+1. 访问/mockjsauto/服务
+2. 匹配到接口后与/mockjs/一样加载接口模型
+3. 加载本API设置的规则数据，覆盖原模型
+4. 继续走后续的mock数据生成逻辑
+
+#### modify接口EXAMPLE
+
+##### 请求
+
+```
+http://{ipAddress}:8001/api/modifyMockRules.do?actionId=624&rules={%22responseParameterList%22:[{%22identifier%22:%22act_price%22,%22remarkChange%22:%22@mock=189%22}]}
+```
+#### 返回结果
+
+```json
+{"isOk":true,"msg":""}
+```
+
+#### Mock接口EXAMPLE
+
+##### 请求
+
+```
+http://{ipAddress}:8001/mockjsauto/43/x?
+```
+
+##### 返回结果
+
+```json
+{"price":71441,"desc":"\u6d4b\u8bd5\u5185\u5bb9u250","act_price":189,"countdown_sec":54565,"shop_title":"\u6d4b\u8bd5\u5185\u5bb938qw","outer_id":"\u6d4b\u8bd5\u5185\u5bb9ln6c","promotions":[],"coupons":[],"detail_url":"\u6d4b\u8bd5\u5185\u5bb94w8u","title":"\u6d4b\u8bd5\u5185\u5bb9cevd","num":61425,"pic_url":"\u6d4b\u8bd5\u5185\u5bb9gu94","wap_detail_url":"\u6d4b\u8bd5\u5185\u5bb98f25","num_iid":"\u6d4b\u8bd5\u5185\u5bb9s38q","nick":"\u6d4b\u8bd5\u5185\u5bb9yknj","earnest":84155}
+```
 
 ## 常见问题
 
