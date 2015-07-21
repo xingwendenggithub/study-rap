@@ -69,7 +69,7 @@
 
 
 
-该文档详细介绍了RAP的使用方法，初学者建议通过[RAP视频学习中心](http://thx.github.io/RAP/study.html) 观看演示视频，帮助更好的上手。若文档不能解决亲的疑问，请在[Issues](https://github.com/thx/RAP/issues)中发帖，也欢迎关注我的新浪微博`@Bosn`。
+该文档详细介绍了RAP的使用方法，初学者建议通过[RAP视频学习中心](http://thx.github.io/RAP/study.html) 观看演示视频，帮助更好的上手。若文档不能解决亲的疑问，请在[Issues](https://github.com/thx/RAP/issues)中发帖，也欢迎关注我的新浪微博[@Bosn](http://weibo.com/bosn)。
 
 ## 创建RAP文档
 
