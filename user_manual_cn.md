@@ -296,10 +296,14 @@ RAP提供了 `Mock插件`（暂时仅支持Kissy和jQuery），使用只需要�
 <script type="text/javascript" src="http://{{domainName}}/rap.plugin.js?projectId={{projectId}}&mode={{mode}}"></script>
 ```
 
-其中：
+必选参数：
 
 - `{{projectId}}`为用户所编辑的接口在RAP中的项目ID
+
+可选参数：
+
 - `{{mode}}`为RAP路由的工作模式, 默认值为3。
+- `{{disableLog}}`为true时会禁止向控制台输出log，仅保留必要部分，默认为false
 
 mode不同值的具体含义如下:
 
