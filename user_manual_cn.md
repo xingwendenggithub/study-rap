@@ -61,6 +61,7 @@
   - [项目路由有什么用？](#%E9%A1%B9%E7%9B%AE%E8%B7%AF%E7%94%B1%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F)
   - [我使用的AngularJS如何使用RAP插件？](#%E6%88%91%E4%BD%BF%E7%94%A8%E7%9A%84angularjs%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8rap%E6%8F%92%E4%BB%B6%EF%BC%9F)
   - [有办法让RAP服务直接返回MockJS数据，而不是MockJS模板吗？](#%E6%9C%89%E5%8A%9E%E6%B3%95%E8%AE%A9rap%E6%9C%8D%E5%8A%A1%E7%9B%B4%E6%8E%A5%E8%BF%94%E5%9B%9Emockjs%E6%95%B0%E6%8D%AE%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AFmockjs%E6%A8%A1%E6%9D%BF%E5%90%97%EF%BC%9F)
+  - [有一些复杂的参数想移动，或复制到别的地方，有什么轻松的方法没有？](#%E6%9C%89%E4%B8%80%E4%BA%9B%E5%A4%8D%E6%9D%82%E7%9A%84%E5%8F%82%E6%95%B0%E6%83%B3%E7%A7%BB%E5%8A%A8%EF%BC%8C%E6%88%96%E5%A4%8D%E5%88%B6%E5%88%B0%E5%88%AB%E7%9A%84%E5%9C%B0%E6%96%B9%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E8%BD%BB%E6%9D%BE%E7%9A%84%E6%96%B9%E6%B3%95%E6%B2%A1%E6%9C%89%EF%BC%9F)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -665,3 +666,9 @@ http://{{domainName}}/mockjsdata/79/rap_mockjs_rules_demo.do?
 2. 节省传输带宽
 3. 更加灵活，提供在特殊场景二次修改规则的机会。
 ```
+
+### 有一些复杂的参数想移动，或复制到别的地方，有什么轻松的方法没有？
+
+必须有啊，只需要在目标位置输入相同变量名，然后通过快捷键`ctrl + enter`就可以自动完成，不管嵌套多少层的复杂参数都会一键赋值过去。
+
+如果有多个相同变量名，系统随机复制一个，可以通过临时修改要赋值的变量名来实现拷贝。例如有两个`data`，把想要赋值的临时修改为`data123`复制完成后再改回来即可。
