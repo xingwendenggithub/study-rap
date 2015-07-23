@@ -1,15 +1,6 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Navigator](#navigator)
-- [Technical Support](#technical-support)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 [切换至中文](home_cn)
 
-Welcome to RAP wiki!
+# RAP Wiki
 
 ### Navigator
 * Offical Site [link](http://thx.github.io/RAP)
