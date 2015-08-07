@@ -41,19 +41,13 @@
 
 若想部署RAP服务，有两个办法：
 
-1. 使用war包部署（推荐）部署方法见issues中的Release帖，较适合只想用RAP不想自己开发定制功能的。（构建项目和导入IDE部分请忽略...IDE也不用装了）
-2. 自己导入到IDE部署，需要配置J2EE开发环境。适合想要研究RAP代码，自己开发想要功能的。（继续往下看）
+1. 使用war包部署`推荐` 
+    * 部署方法见issues中的Release帖，较适合只想用RAP不想自己开发定制功能的。（构建项目不用看，从配置服务器环境开始看即可。）
+2. 自己导入到IDE部署
+    * 需要配置J2EE开发环境。适合想要研究RAP代码，自己开发想要功能的。
 
 
-以下是我们想到的您所需的准备工作：
-
-1. Eclipse/MyEclipse/IDEA(推荐)
-2. JDK 1.7+
-3. MySQL 5.6.12+  // 太老的MySQL运行initialize.sql会报多timestamp错误
-4. Tomcat 6.*+
-5. Git
-
-## 构建项目
+## 构建项目 (war包部署不需要)
 
 ### 获取源代码
 
@@ -67,6 +61,15 @@ git checkout release
 ### 导入到IDE
 
 以MyEclipse为例，在Package Explorer中右键 -> Import -> Existing Projects into Workspace, 将RAP项目导入进来。
+
+## 配置服务器环境
+
+### 安装基本工具
+1. Eclipse/MyEclipse/IDEA(war包部署不需要)
+2. JDK 1.7+
+3. MySQL 5.6.12+  // 太老的MySQL运行initialize.sql会报多timestamp错误
+4. Tomcat 6.*+
+5. Git
 
 ### 初始化数据库
 
