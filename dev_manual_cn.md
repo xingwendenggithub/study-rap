@@ -66,3 +66,5 @@
 * DATABASE_CHANGE.md 近期数据库变化情况文档
 * RAP.iml IntelliJ IDEA的项目工程文件
 * README.md RAP文档
+
+### 数据库字段解释（等补充）
