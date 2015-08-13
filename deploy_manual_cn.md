@@ -69,7 +69,7 @@ git checkout release
 
 ## 启动项目
 
-完成上述步骤，将RAP配置到Tomcat中启动即可。
+完成上述步骤，将RAP配置到Tomcat中启动即可。`注意，因为RAP暂时只支持在根目录部署，因此在tomcat的webapps下请使文件夹命名为ROOT`
 
 剩下的就是跟着[RAP文档中心](http://thx.alibaba-inc.com/RAP)首页的教程一步一步开启RAP之旅啦！
 
