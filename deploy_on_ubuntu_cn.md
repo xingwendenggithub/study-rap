@@ -1,4 +1,4 @@
-#RAP部署
+##在Ubuntu上部署RAP
 
 ```
 系统: ubuntu 14.04
@@ -27,6 +27,8 @@ unzip -x rap_release_v0.11.3_20150727.war -d ROOT
 
 
 ###配置数据库
+
+创建数据库及用户
 
 ```
 mysql -uroot -p
@@ -104,16 +106,17 @@ sudo service nginx restart
 
 
 
-#访问http://ip地址或者域名
+###访问
+访问http://ip地址或者域名
 
 至此 RAP部署完成
 
-##debug
+###debug
 
-tomcat日志位于: /var/log/tomcat7
+tomcat日志位于: ```/var/log/tomcat7```
 
-nginx日志位于:  /var/log/nginx
+nginx日志位于:  ```/var/log/nginx```
 
-##已知bug:
+###已知bug:
 
 rap应用日志无法打印
