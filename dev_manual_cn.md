@@ -67,4 +67,5 @@
 * RAP.iml IntelliJ IDEA的项目工程文件
 * README.md RAP文档
 
-### 数据库字段解释（等补充）
+### 数据库字段解释
+请参考[数据库初始化文件](https://github.com/thx/RAP/blob/master/src/database/initialize.sql)中的注释部分，已经补充了字段注释。
