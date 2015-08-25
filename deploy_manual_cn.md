@@ -46,7 +46,7 @@ git checkout release
 
 ### 安装基本工具
 1. Eclipse/MyEclipse/IDEA(war包部署不需要)
-2. JDK 1.7+
+2. JDK 1.7+ 若报错，**请尽量使用较新版本**
 3. MySQL 5.6.12+  // 太老的MySQL运行initialize.sql会报多timestamp错误
 4. Tomcat 6.*+
 5. Git
