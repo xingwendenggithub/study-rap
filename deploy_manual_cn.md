@@ -1,11 +1,11 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [准备工作](#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C)
-- [构建项目](#%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE)
+- [构建项目 (war包部署不需要)](#%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE-war%E5%8C%85%E9%83%A8%E7%BD%B2%E4%B8%8D%E9%9C%80%E8%A6%81)
   - [获取源代码](#%E8%8E%B7%E5%8F%96%E6%BA%90%E4%BB%A3%E7%A0%81)
   - [导入到IDE](#%E5%AF%BC%E5%85%A5%E5%88%B0ide)
+- [配置服务器环境](#%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83)
+  - [安装基本工具](#%E5%AE%89%E8%A3%85%E5%9F%BA%E6%9C%AC%E5%B7%A5%E5%85%B7)
   - [初始化数据库](#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E6%8D%AE%E5%BA%93)
   - [配置文件](#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)
   - [配置context-root](#%E9%85%8D%E7%BD%AEcontext-root)
@@ -15,45 +15,19 @@
   - [如何增加管理员](#%E5%A6%82%E4%BD%95%E5%A2%9E%E5%8A%A0%E7%AE%A1%E7%90%86%E5%91%98)
   - [为什么有mysql.local.properties和mysql.remote.properties两个数据库配置文件?](#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89mysqllocalproperties%E5%92%8Cmysqlremoteproperties%E4%B8%A4%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)
   - [如何获取更新？](#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E6%9B%B4%E6%96%B0%EF%BC%9F)
+  - [Admin初始密码是什么？](#admin%E5%88%9D%E5%A7%8B%E5%AF%86%E7%A0%81%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-<!-- toc -->
-
-* [准备工作](#准备工作)
-* [构建项目](#构建项目)
-  * [获取源代码](#获取源代码)
-  * [导入到IDE](#导入到ide)
-  * [初始化数据库](#初始化数据库)
-  * [配置文件](#配置文件)
-  * [配置context-root](#配置context-root)
-* [启动项目](#启动项目)
-* [常见问题](#常见问题)
-  * [如何管理团队](#如何管理团队)
-  * [如何增加管理员](#如何增加管理员)
-  * [为什么有mysql.local.properties和mysql.remote.properties两个数据库配置文件?](#为什么有mysqllocalproperties和mysqlremoteproperties两个数据库配置文件)
-  * [如何获取更新？](#如何获取更新)
-
-<!-- toc stop -->
-
-
-## 准备工作
-
 若想部署RAP服务，有两个办法：
 
-1. 使用war包部署（推荐）部署方法见issues中的Release帖，较适合只想用RAP不想自己开发定制功能的。（不用往下看了...）
-2. 自己导入到IDE部署，需要配置J2EE开发环境。适合想要研究RAP代码，自己开发想要功能的。（继续往下看）
+1. 使用war包部署`推荐` 
+    * 部署方法见issues中的Release帖，较适合只想用RAP不想自己开发定制功能的。（构建项目不用看，从配置服务器环境开始看即可。）
+2. 自己导入到IDE部署
+    * 需要配置J2EE开发环境。适合想要研究RAP代码，自己开发想要功能的。
 
 
-以下是我们想到的您所需的准备工作：
-
-1. Eclipse/MyEclipse/IDEA(推荐)
-2. JDK 1.7+
-3. MySQL 5.6.12+  // 太老的MySQL运行initialize.sql会报多timestamp错误
-4. Tomcat 6.*+
-5. Git
-
-## 构建项目
+## 构建项目 (war包部署不需要)
 
 ### 获取源代码
 
@@ -67,6 +41,15 @@ git checkout release
 ### 导入到IDE
 
 以MyEclipse为例，在Package Explorer中右键 -> Import -> Existing Projects into Workspace, 将RAP项目导入进来。
+
+## 配置服务器环境
+
+### 安装基本工具
+1. Eclipse/MyEclipse/IDEA(war包部署不需要)
+2. JDK 1.7+ 若报错，**请尽量使用较新版本**
+3. MySQL 5.6.12+  // 太老的MySQL运行initialize.sql会报多timestamp错误
+4. Tomcat 6.*+
+5. Git
 
 ### 初始化数据库
 
@@ -86,7 +69,7 @@ git checkout release
 
 ## 启动项目
 
-完成上述步骤，将RAP配置到Tomcat中启动即可。
+完成上述步骤，将RAP配置到Tomcat中启动即可。`注意，因为RAP暂时只支持在根目录部署，因此在tomcat的webapps下请使文件夹命名为ROOT`
 
 剩下的就是跟着[RAP文档中心](http://thx.alibaba-inc.com/RAP)首页的教程一步一步开启RAP之旅啦！
 
