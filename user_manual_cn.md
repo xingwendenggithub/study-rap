@@ -16,52 +16,25 @@
   - [文档保存](#%E6%96%87%E6%A1%A3%E4%BF%9D%E5%AD%98)
   - [RAP快捷键](#rap%E5%BF%AB%E6%8D%B7%E9%94%AE)
   - [接口文档编辑进阶](#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E8%BF%9B%E9%98%B6)
-    - [接口文档请求链接语法](#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E8%AF%B7%E6%B1%82%E9%93%BE%E6%8E%A5%E8%AF%AD%E6%B3%95)
-    - [最外层为数组的接口](#%E6%9C%80%E5%A4%96%E5%B1%82%E4%B8%BA%E6%95%B0%E7%BB%84%E7%9A%84%E6%8E%A5%E5%8F%A3)
-    - [RESTful API的支持](#restful-api%E7%9A%84%E6%94%AF%E6%8C%81)
 - [前端工具](#%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7)
   - [前端Mock数据生成](#%E5%89%8D%E7%AB%AFmock%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90)
-    - [引入插件](#%E5%BC%95%E5%85%A5%E6%8F%92%E4%BB%B6)
-    - [Mock.js规则](#mockjs%E8%A7%84%E5%88%99)
-    - [Mock规则填写示范](#mock%E8%A7%84%E5%88%99%E5%A1%AB%E5%86%99%E7%A4%BA%E8%8C%83)
-    - [Mock标签的使用](#mock%E6%A0%87%E7%AD%BE%E7%9A%84%E4%BD%BF%E7%94%A8)
-    - [Mock插件](#mock%E6%8F%92%E4%BB%B6)
-    - [NodeJS插件](#nodejs%E6%8F%92%E4%BB%B6)
 - [后端工具](#%E5%90%8E%E7%AB%AF%E5%B7%A5%E5%85%B7)
   - [后端接口控制台Page Tester](#%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E6%8E%A7%E5%88%B6%E5%8F%B0page-tester)
-    - [如何进入控制台](#%E5%A6%82%E4%BD%95%E8%BF%9B%E5%85%A5%E6%8E%A7%E5%88%B6%E5%8F%B0)
 - [测试工具](#%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7)
   - [自动化测试](#%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95)
 - [开放API](#%E5%BC%80%E6%94%BEapi)
   - [API1：返回RAP项目的模型数据，到接口层级。](#api1%EF%BC%9A%E8%BF%94%E5%9B%9Erap%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%A8%A1%E5%9E%8B%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%88%B0%E6%8E%A5%E5%8F%A3%E5%B1%82%E7%BA%A7%E3%80%82)
-    - [路径和请求参数](#%E8%B7%AF%E5%BE%84%E5%92%8C%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
-    - [响应数据结构](#%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
-    - [EXAMPLE](#example)
   - [API2：获取JSON格式的RAP接口文档数据](#api2%EF%BC%9A%E8%8E%B7%E5%8F%96json%E6%A0%BC%E5%BC%8F%E7%9A%84rap%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E6%95%B0%E6%8D%AE)
-    - [链接](#%E9%93%BE%E6%8E%A5)
-    - [参数](#%E5%8F%82%E6%95%B0)
   - [API3：获取项目白名单（所有接口路径列表）](#api3%EF%BC%9A%E8%8E%B7%E5%8F%96%E9%A1%B9%E7%9B%AE%E7%99%BD%E5%90%8D%E5%8D%95%EF%BC%88%E6%89%80%E6%9C%89%E6%8E%A5%E5%8F%A3%E8%B7%AF%E5%BE%84%E5%88%97%E8%A1%A8%EF%BC%89)
-    - [链接](#%E9%93%BE%E6%8E%A5-1)
-    - [参数](#%E5%8F%82%E6%95%B0-1)
   - [API4：校验真实数据的正确性](#api4%EF%BC%9A%E6%A0%A1%E9%AA%8C%E7%9C%9F%E5%AE%9E%E6%95%B0%E6%8D%AE%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%80%A7)
-    - [URL](#url)
-    - [输入参数](#%E8%BE%93%E5%85%A5%E5%8F%82%E6%95%B0)
-    - [输出](#%E8%BE%93%E5%87%BA)
-    - [EXAMPLE](#example-1)
   - [API5: 通过Open API修改Mock规则（接口级）](#api5-%E9%80%9A%E8%BF%87open-api%E4%BF%AE%E6%94%B9mock%E8%A7%84%E5%88%99%EF%BC%88%E6%8E%A5%E5%8F%A3%E7%BA%A7%EF%BC%89)
-    - [接口设计](#%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1)
-    - [规则语法设计](#%E8%A7%84%E5%88%99%E8%AF%AD%E6%B3%95%E8%AE%BE%E8%AE%A1)
-    - [由该API设置的规则如何使用](#%E7%94%B1%E8%AF%A5api%E8%AE%BE%E7%BD%AE%E7%9A%84%E8%A7%84%E5%88%99%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)
-    - [自动化测试接口(/mockjsauto/)加载规则](#%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E6%8E%A5%E5%8F%A3mockjsauto%E5%8A%A0%E8%BD%BD%E8%A7%84%E5%88%99)
-    - [modify接口EXAMPLE](#modify%E6%8E%A5%E5%8F%A3example)
-    - [返回结果](#%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C)
-    - [Mock接口EXAMPLE](#mock%E6%8E%A5%E5%8F%A3example)
 - [常见问题](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
   - [如何导入JSON到请求参数](#%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5json%E5%88%B0%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0)
   - [项目路由有什么用？](#%E9%A1%B9%E7%9B%AE%E8%B7%AF%E7%94%B1%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%EF%BC%9F)
   - [我使用的AngularJS如何使用RAP插件？](#%E6%88%91%E4%BD%BF%E7%94%A8%E7%9A%84angularjs%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8rap%E6%8F%92%E4%BB%B6%EF%BC%9F)
   - [有办法让RAP服务直接返回MockJS数据，而不是MockJS模板吗？](#%E6%9C%89%E5%8A%9E%E6%B3%95%E8%AE%A9rap%E6%9C%8D%E5%8A%A1%E7%9B%B4%E6%8E%A5%E8%BF%94%E5%9B%9Emockjs%E6%95%B0%E6%8D%AE%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AFmockjs%E6%A8%A1%E6%9D%BF%E5%90%97%EF%BC%9F)
   - [有一些复杂的参数想移动，或复制到别的地方，有什么轻松的方法没有？](#%E6%9C%89%E4%B8%80%E4%BA%9B%E5%A4%8D%E6%9D%82%E7%9A%84%E5%8F%82%E6%95%B0%E6%83%B3%E7%A7%BB%E5%8A%A8%EF%BC%8C%E6%88%96%E5%A4%8D%E5%88%B6%E5%88%B0%E5%88%AB%E7%9A%84%E5%9C%B0%E6%96%B9%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E8%BD%BB%E6%9D%BE%E7%9A%84%E6%96%B9%E6%B3%95%E6%B2%A1%E6%9C%89%EF%BC%9F)
+  - [项目显示被XXX锁定怎么办？](#%E9%A1%B9%E7%9B%AE%E6%98%BE%E7%A4%BA%E8%A2%ABxxx%E9%94%81%E5%AE%9A%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -672,3 +645,9 @@ http://{{domainName}}/mockjsdata/79/rap_mockjs_rules_demo.do?
 必须有啊，只需要在目标位置输入相同变量名，然后通过快捷键`ctrl + enter`就可以自动完成，不管嵌套多少层的复杂参数都会一键赋值过去。
 
 如果有多个相同变量名，系统随机复制一个，可以通过临时修改要赋值的变量名来实现拷贝。例如有两个`data`，把想要赋值的临时修改为`data123`复制完成后再改回来即可。
+
+### 项目显示被XXX锁定怎么办？
+
+RAP在处理接口文档冲突时，使用的类似Wiki的【同时只允许一个人编辑】的策略。当用户正在编辑文档时，会锁定接口文档，其他用户需等待该用户`保存`或`取消`后，才能编辑。
+
+若因为非正常关闭，导致接口文档持续被锁定，需要请锁定该项目的用户，重新进入该项目，点击编辑后再点保存或退出即可解锁。
