@@ -35,6 +35,7 @@
   - [有办法让RAP服务直接返回MockJS数据，而不是MockJS模板吗？](#%E6%9C%89%E5%8A%9E%E6%B3%95%E8%AE%A9rap%E6%9C%8D%E5%8A%A1%E7%9B%B4%E6%8E%A5%E8%BF%94%E5%9B%9Emockjs%E6%95%B0%E6%8D%AE%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AFmockjs%E6%A8%A1%E6%9D%BF%E5%90%97%EF%BC%9F)
   - [有一些复杂的参数想移动，或复制到别的地方，有什么轻松的方法没有？](#%E6%9C%89%E4%B8%80%E4%BA%9B%E5%A4%8D%E6%9D%82%E7%9A%84%E5%8F%82%E6%95%B0%E6%83%B3%E7%A7%BB%E5%8A%A8%EF%BC%8C%E6%88%96%E5%A4%8D%E5%88%B6%E5%88%B0%E5%88%AB%E7%9A%84%E5%9C%B0%E6%96%B9%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E8%BD%BB%E6%9D%BE%E7%9A%84%E6%96%B9%E6%B3%95%E6%B2%A1%E6%9C%89%EF%BC%9F)
   - [项目显示被XXX锁定怎么办？](#%E9%A1%B9%E7%9B%AE%E6%98%BE%E7%A4%BA%E8%A2%ABxxx%E9%94%81%E5%AE%9A%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F)
+  - [如何控制最外层的MOCK数据规则？](#%E5%A6%82%E4%BD%95%E6%8E%A7%E5%88%B6%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84mock%E6%95%B0%E6%8D%AE%E8%A7%84%E5%88%99%EF%BC%9F)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -651,3 +652,7 @@ http://{{domainName}}/mockjsdata/79/rap_mockjs_rules_demo.do?
 RAP在处理接口文档冲突时，使用的类似Wiki的【同时只允许一个人编辑】的策略。当用户正在编辑文档时，会锁定接口文档，其他用户需等待该用户`保存`或`取消`后，才能编辑。
 
 若因为非正常关闭，导致接口文档持续被锁定，需要请锁定该项目的用户，重新进入该项目，点击编辑后再点保存或退出即可解锁。
+
+### 如何控制最外层的MOCK数据规则？
+
+例如，我最外层就是数组，我想控制最外层数组限制在3~7组。则只需要创建特殊的节点__root__|3-7 : [...]，RAP会自动将__root__属性的值作为最终返回结果。
