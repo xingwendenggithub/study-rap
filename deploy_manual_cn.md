@@ -1,14 +1,15 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [构建项目 (war包部署不需要)](#%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE-war%E5%8C%85%E9%83%A8%E7%BD%B2%E4%B8%8D%E9%9C%80%E8%A6%81)
   - [获取源代码](#%E8%8E%B7%E5%8F%96%E6%BA%90%E4%BB%A3%E7%A0%81)
   - [导入到IDE](#%E5%AF%BC%E5%85%A5%E5%88%B0ide)
-- [配置服务器环境](#%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83)
+- [配置环境](#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83)
   - [安装基本工具](#%E5%AE%89%E8%A3%85%E5%9F%BA%E6%9C%AC%E5%B7%A5%E5%85%B7)
   - [初始化数据库](#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E6%8D%AE%E5%BA%93)
   - [配置文件](#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)
-  - [配置context-root](#%E9%85%8D%E7%BD%AEcontext-root)
+  - [配置context-root （war包部署不需要）](#%E9%85%8D%E7%BD%AEcontext-root-%EF%BC%88war%E5%8C%85%E9%83%A8%E7%BD%B2%E4%B8%8D%E9%9C%80%E8%A6%81%EF%BC%89)
 - [启动项目](#%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE)
 - [常见问题](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
   - [如何管理团队](#%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E5%9B%A2%E9%98%9F)
@@ -19,13 +20,12 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-若想部署RAP服务，有两个办法：
+部署方式有两种。
 
-1. 使用war包部署`推荐` 
-    * 部署方法见issues中的Release帖，较适合只想用RAP不想自己开发定制功能的。（构建项目不用看，从配置服务器环境开始看即可。）
-2. 自己导入到IDE部署
-    * 需要配置J2EE开发环境。适合想要研究RAP代码，自己开发想要功能的。
-
+1. 使用编译好的war包部署
+    * 适合仅想部署RAP服务，不需开发定制功能的同学
+2. 使用源码自行编译、开发后部署
+    * 需配置J2EE开发环境， 适合想要研究RAP源代码，开发定制功能的同学
 
 ## 构建项目 (war包部署不需要)
 
@@ -36,40 +36,49 @@ git clone git@github.com:thx/RAP.git
 git checkout release
 ```
 
-确保您正确的切换到release分支，该分支会去掉一些阿里巴巴公司内网才能正常运作的模块。
+**确保您正确的切换到release分支**，否则会出现少包，因为master分支引用一些不对外公开的内部组件，不提供给外部用户使用。
 
 ### 导入到IDE
 
 以MyEclipse为例，在Package Explorer中右键 -> Import -> Existing Projects into Workspace, 将RAP项目导入进来。
 
-## 配置服务器环境
+根据您IDE的不同，导入项目的方式也有所差异。建议自行检索，如果您根本不懂Java开发，建议跳过这里用编译好的war包部署吧。 d-  .-b|||
+
+## 配置环境
 
 ### 安装基本工具
-1. Eclipse/MyEclipse/IDEA(war包部署不需要)
-2. JDK 1.7+ 若报错，**请尽量使用较新版本**
-3. MySQL 5.6.12+  // 太老的MySQL运行initialize.sql会报多timestamp错误
-4. Tomcat 6.*+
-5. Git
+
+* 仅使用源码自行编译才需要安装的(即，使用war包部署不需要安装)
+    * Eclipse/MyEclipse/IDEA
+    * Git
+* 都需要安装的
+    * JDK 1.7+ `若报错，请尽量使用较新版本`
+    * MySQL 5.6.12+  `太老的MySQL运行initialize.sql会报多timestamp错误`
+    * Tomcat 6.*+
+
+以上工具如何安装自行检索。
 
 ### 初始化数据库
 
-执行`src/database/intialize.sql`，该脚本中包含数据库创建、表&结构创建、必要的初始数据创建的全部内容。
-
-注意！该文件在release分支，路径是[https://github.com/thx/RAP/blob/release/src/database/initialize.sql](https://github.com/thx/RAP/blob/release/src/database/initialize.sql)
+执行**release**分支下的SQL脚本： [src/database/intialize.sql](https://github.com/thx/RAP/blob/release/src/database/initialize.sql)，该脚本中包含数据库创建、表&结构创建、必要的初始数据创建的全部内容。
 
 ### 配置文件
 
 请正确配置`src/mysql.local.properties`中的数据库连接地址、用户名和密码。
 
-### 配置context-root
+### 配置context-root （war包部署不需要）
 
-打开项目属性(Properties), 在Properties -> MyEclipse -> Web -> Web Context-root中，将其修改为/ROOT，以确保RAP部署在tomcat/webapps/ROOT中。
+将context-root设置为/，即访问RAP时，必须是http://domain.com/  而不能是 http://domain.com/rap/。
 
-如果是Eclipse, Properties -> Web Project Settings -> Context Root 中修改，确保其为ROOT
+设置context-root不同的IDE设置方法不一样，以MyEclipse/Eclipse举例：
+* MyEclipse中，打开项目属性(Properties), 在Properties -> MyEclipse -> Web -> Web Context-root中，将其修改为/ROOT，以确保RAP部署在tomcat/webapps/ROOT中。
+* 如果是Eclipse, Properties -> Web Project Settings -> Context Root 中修改，确保其为ROOT
 
 ## 启动项目
 
-完成上述步骤，将RAP配置到Tomcat中启动即可。`注意，因为RAP暂时只支持在根目录部署，因此在tomcat的webapps下请使文件夹命名为ROOT`
+完成上述步骤，将RAP配置到Tomcat中启动即可。
+
+`注意!RAP暂时仅支持在根目录部署，若使用编译好的war包部署，需将war包改名为ROOT.war，以确保RAP部署在webapps/ROOT中！`
 
 剩下的就是跟着[RAP文档中心](http://thx.alibaba-inc.com/RAP)首页的教程一步一步开启RAP之旅啦！
 
