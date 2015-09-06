@@ -3,6 +3,9 @@
 
 # RAP Wiki
 
+### 线上演示
+* [DEMO：http://rapapi.net/](http://rapapi.net/)
+
 ### 上手视频
 片源：<a href="http://cloud.video.taobao.com//play/u/11051796/p/1/e/1/t/1/11622279.swf" target="_blank">淘宝视频</a> <a href="http://v.youku.com/v_show/id_XNjk5NjMxODA4.html" target="_blank">优酷</a>
 
