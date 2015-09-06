@@ -2,6 +2,8 @@
 
 # RAP Wiki
 
+[DEMO](http://rapapi.net/)
+
 ### Navigator
 * Offical Site [link](http://thx.github.io/RAP)
 * What is RAP? [link](about)
