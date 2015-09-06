@@ -2,7 +2,7 @@
 
 # RAP Wiki
 
-[DEMO](http://rapapi.net/)
+[DEMO：http://rapapi.net/](http://rapapi.net/)
 
 ### Navigator
 * Offical Site [link](http://thx.github.io/RAP)
