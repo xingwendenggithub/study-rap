@@ -6,6 +6,7 @@
 
 ### Navigator
 * Offical Site [link](http://thx.github.io/RAP)
+* Quick Guide (Recommend) [link](https://github.com/thx/RAP/wiki/quick_guide)
 * What is RAP? [link](about)
 * If you are a RAP user, want to know how to operate in RAP, please check [User Manual](user_manual)
 * If you want to deploy your own RAP server, know how to deploy, please check [Deploy Manual](deploy_manual)
