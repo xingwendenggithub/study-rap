@@ -1,1 +1,1 @@
-powerd by Bosn
+powerd by Bosn@Alimama MUX
