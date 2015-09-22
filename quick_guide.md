@@ -56,3 +56,6 @@ Press `MockJS Data` button, you can see RAP can generate mock data based on your
 ### Before we end
 
 This quick guide is a easy and quick guide of how to use RAP. How to manage mock rules? Any questions on API edit and mock/validate tools, please  read user manual for details.
+
+
+Any questions, freely create issues [here](github.com/thx/RAP/issues), or send me an [e-mail](mailto:bosn@outlook.com) :)
