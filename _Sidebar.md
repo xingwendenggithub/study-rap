@@ -12,7 +12,7 @@
     * [在ubuntu上部署](deploy_on_ubuntu_cn)
     * [在centos上部署](deploy_on_centos_cn)
   * [开发手册](dev_manual_cn)
-* [版本文档]
+* 版本需求/设计文档
     * [v0.11.5](v0.11.5)
 
 
