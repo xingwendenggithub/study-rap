@@ -20,6 +20,10 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+
+### 写在最前
+部署RAP需要亲具有J2EE+Linux+MySQL的运维知识，如果亲对此不是很了解，建议用[http://cn.rapapi.net](http://cn.rapapi.net)线上版本就可以了。
+
 部署方式有两种。
 
 1. 使用编译好的war包部署
