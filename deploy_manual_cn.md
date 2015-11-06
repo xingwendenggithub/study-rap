@@ -24,6 +24,8 @@
 ### 写在最前
 部署RAP需要亲具有J2EE+Linux+MySQL的运维知识，如果亲对此不是很了解，建议用[http://cn.rapapi.net](http://cn.rapapi.net)线上版本就可以了。
 
+自己部署RAP服务的同学，为了在有新Release、发现重大安全漏洞时能够及时的通知到各位管理员，请随便发个邮件至 `bosn@outlook.com` 告诉我就好。
+
 部署方式有两种。
 
 1. 使用编译好的war包部署
