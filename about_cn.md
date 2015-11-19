@@ -2,8 +2,10 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [什么是RAP?](#%E4%BB%80%E4%B9%88%E6%98%AFrap)
-- [RAP的特色](#rap%E7%9A%84%E7%89%B9%E8%89%B2)
+- [什么是RAP?
+](#%E4%BB%80%E4%B9%88%E6%98%AFrap)
+- [RAP的特色
+](#rap%E7%9A%84%E7%89%B9%E8%89%B2)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -14,7 +16,7 @@ RAP是一个GUI的WEB接口管理工具。在RAP中，您可定义接口的URL�
 
 在前后端分离的开发模式下，我们通常需要定义一份`接口文档`来规范接口的具体信息。如一个请求的地址、有几个参数、参数名称及类型含义等等。`RAP` 首先方便团队录入、查看和管理这些接口文档，并通过分析结构化的文档数据，重复利用并生成自测数据、提供自测控制台等等... 大幅度提升开发效率。
 
-RAP的特色
+RAP的特
 --------------------------------------
 
 - `强大的GUI工具` 给力的用户体验，你将会爱上使用RAP来管理您的API文档。
