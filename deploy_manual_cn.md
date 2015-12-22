@@ -34,8 +34,7 @@
     * 需配置J2EE开发环境， 适合想要研究RAP源代码，开发定制功能的同学
 
 ## war包部署方法
-部署办法
-====
+
 在[Release](https://github.com/thx/RAP/releases)页面中下载war包（建议用最新），
 将war包修改为`ROOT.war`后放入tomcat webapps文件夹中。
 startup.sh(.bat)启动tomcat，该war包自动部署到文件夹ROOT
