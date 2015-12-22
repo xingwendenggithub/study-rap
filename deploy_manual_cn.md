@@ -33,6 +33,19 @@
 2. 使用源码自行编译、开发后部署
     * 需配置J2EE开发环境， 适合想要研究RAP源代码，开发定制功能的同学
 
+## war包部署方法
+部署办法
+====
+在[Release](https://github.com/thx/RAP/releases)页面中下载war包（建议用最新），
+将war包修改为`ROOT.war`后放入tomcat webapps文件夹中。
+startup.sh(.bat)启动tomcat，该war包自动部署到文件夹ROOT
+停掉服务器，打开ROOT中得WEB-INF`/classes/mysql.local.properties` 来修改数据库配置
+启动tomcat，完成部署。
+
+```
+注意，一定要用ROOT部署，历史原因暂时只支持ROOT部署
+```
+
 ## 构建项目 (war包部署不需要)
 
 ### 获取源代码
