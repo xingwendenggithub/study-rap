@@ -4,7 +4,7 @@
 # RAP Wiki
 
 ### 使用RAP
-* [http://rapapi.net/](http://rapapi.net/)  由RAP作者维护，每日备份数据
+* [http://rap.taobao.org/](http://rap.taobao.org/)  由RAP作者维护，每日备份数据
 
 ### 上手视频
 片源：<a href="http://cloud.video.taobao.com//play/u/11051796/p/1/e/1/t/1/11622279.swf" target="_blank">淘宝视频</a> <a href="http://v.youku.com/v_show/id_XNjk5NjMxODA4.html" target="_blank">优酷</a>

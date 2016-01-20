@@ -2,7 +2,7 @@
 
 # RAP Wiki
 
-[DEMO：http://rapapi.net/](http://rapapi.net/)
+[线上版RAP：http://rap.taobao.org/](http://rap.taobao.org/)
 
 ### Navigator
 * Offical Site [link](http://thx.github.io/RAP)

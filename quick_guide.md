@@ -7,7 +7,7 @@
 
 ### Login & register
 
-Enter [http://rapapi.net](http://rapapi.net) than register your account.
+Enter [http://rap.taobao.org](http://rap.taobao.org) than register your account.
 
 ![](http://gtms02.alicdn.com/tps/i2/TB1vEjfJpXXXXcJXFXXXQk94FXX-2698-1670.png)
 
