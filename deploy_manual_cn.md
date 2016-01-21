@@ -86,6 +86,12 @@ git checkout release
 
 执行**release**分支下的SQL脚本： [src/database/intialize.sql](https://github.com/thx/RAP/blob/release/src/database/initialize.sql)，该脚本中包含数据库创建、表&结构创建、必要的初始数据创建的全部内容。
 
+注意，因最新的mysql的sql_mode设置的比较严格，需要手动配置下SQL_MODE来禁止full_group检查，可以改MySQL配置文件，或者运行如下SQL语句来修改SQL_MODE：
+
+```sql
+SET @@global.sql_mode = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION';
+```
+
 ### 配置文件
 
 请正确配置`src/mysql.local.properties`中的数据库连接地址、用户名和密码。
