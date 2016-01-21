@@ -70,11 +70,17 @@ git checkout release
     * Eclipse/MyEclipse/IDEA
     * Git
 * 都需要安装的
-    * JDK 1.7+ `若报错，请尽量使用较新版本`
+    * JDK 1.8+ `若报错，请尽量使用较新版本`
     * MySQL 5.6.12+  `太老的MySQL运行initialize.sql会报多timestamp错误`
-    * Tomcat 6.*+
+    * Tomcat 8.*+  `不要用9alpha，alpha和beta出任何诡异问题我肯定不知道，亲愿意折腾倒也无妨，个人不建议`
+    * Redis 3.0+  `部署在本机，默认端口即可`
 
 以上工具如何安装自行检索。
+
+### 安装Redis
+* RAPA需要部署Redis Server，端口默认即可。建议使用3.0稳定版 [下载地址](http://redis.io/download)
+    * 下载后，解压缩，进入redis文件夹，使用make命令完成编译
+        * 执行`./src/redis-server` 来启动Redis Server，若Redis未启动，RAP会报Redis未启动的异常。建议使用`nohup ./src/redis-server &` 来启动Redis Server，更多用法见官网文档。
 
 ### 初始化数据库
 
