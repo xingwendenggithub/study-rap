@@ -2,9 +2,6 @@
 
 `更新时间：2015/7/21`
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 
 - [创建RAP文档](#%E5%88%9B%E5%BB%BArap%E6%96%87%E6%A1%A3)
   - [登录、注册](#%E7%99%BB%E5%BD%95%E3%80%81%E6%B3%A8%E5%86%8C)
@@ -16,6 +13,7 @@
   - [文档保存](#%E6%96%87%E6%A1%A3%E4%BF%9D%E5%AD%98)
   - [RAP快捷键](#rap%E5%BF%AB%E6%8D%B7%E9%94%AE)
   - [接口文档编辑进阶](#%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E8%BF%9B%E9%98%B6)
+  - [导入导出项目数据](#%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA%E9%A1%B9%E7%9B%AE%E6%95%B0%E6%8D%AE)
 - [前端工具](#%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7)
   - [前端Mock数据生成](#%E5%89%8D%E7%AB%AFmock%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90)
 - [后端工具](#%E5%90%8E%E7%AB%AF%E5%B7%A5%E5%85%B7)
@@ -38,11 +36,6 @@
   - [有一些复杂的参数想移动，或复制到别的地方，有什么轻松的方法没有？](#%E6%9C%89%E4%B8%80%E4%BA%9B%E5%A4%8D%E6%9D%82%E7%9A%84%E5%8F%82%E6%95%B0%E6%83%B3%E7%A7%BB%E5%8A%A8%EF%BC%8C%E6%88%96%E5%A4%8D%E5%88%B6%E5%88%B0%E5%88%AB%E7%9A%84%E5%9C%B0%E6%96%B9%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E8%BD%BB%E6%9D%BE%E7%9A%84%E6%96%B9%E6%B3%95%E6%B2%A1%E6%9C%89%EF%BC%9F)
   - [项目显示被XXX锁定怎么办？](#%E9%A1%B9%E7%9B%AE%E6%98%BE%E7%A4%BA%E8%A2%ABxxx%E9%94%81%E5%AE%9A%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F)
   - [如何控制最外层的MOCK数据规则？](#%E5%A6%82%E4%BD%95%E6%8E%A7%E5%88%B6%E6%9C%80%E5%A4%96%E5%B1%82%E7%9A%84mock%E6%95%B0%E6%8D%AE%E8%A7%84%E5%88%99%EF%BC%9F)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-<!-- toc -->
-<!-- toc stop -->
 
 
 
@@ -163,6 +156,16 @@ RESTFul API经常根据具体参数值决定接口，例如下面两个接口的
 http://www.taobao.com/getREST?{path}=delete  // 删除接口
 http://www.taobao.com/getREST?{path}=update  // 更新接口
 ```
+
+
+### 导入导出项目数据
+
+#### 导出
+在文档编辑区，点击右上角“更多功能” => 导出备份，点击后页面显示一个大的JSON，该JSON即可用于恢复数据。
+
+#### 导入
+在文档编辑区，点击右上角“更多功能” => 导入备份，在浮动窗口的文本区域中，粘贴想要还原的JSON，即可恢复项目数据，并算一次提交。若想要撤销可以通过切换版本回滚到备份还原之前。
+
 
 ## 前端工具
 
