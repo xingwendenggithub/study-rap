@@ -7,26 +7,26 @@
 
 ```
 系统: ubuntu 14.04
-rap版本:  rap_release_v0.11.3_20150727.war
+rap版本:  RAP-0.14.0-SNAPSHOT.war
 ```
 
 ###安装基础软件
 
 ```bash
-sudo apt-get install mysql-server-5.6 nginx tomcat7 tomcat7-admin unzip 
+sudo apt-get install mysql-server-5.6 nginx tomcat7 tomcat7-admin unzip redis-server
 ```
 安装过程中会提示输入mysql root的密码
 
 下载war包
 
 ```bash
-wget https://raw.githubusercontent.com/thx/RAP/release/release/rap_release_v0.11.3_20150727.war
+wget http://rap.taobao.org/release/RAP-0.14.0-SNAPSHOT.war
 ```
 
 解压应用至ROOT
 
 ```
-unzip -x rap_release_v0.11.3_20150727.war -d ROOT
+unzip -x RAP-0.14.0-SNAPSHOT.war -d ROOT
 
 ```
 
@@ -62,6 +62,9 @@ jdbc.username=rap
 jdbc.password=password
 
 ```
+
+其中redis配置可根据需求更改
+
 
 ###配置tomcat
 
@@ -121,7 +124,3 @@ sudo service nginx restart
 tomcat日志位于: ```/var/log/tomcat7```
 
 nginx日志位于:  ```/var/log/nginx```
-
-###已知bug:
-
-rap应用日志无法打印
