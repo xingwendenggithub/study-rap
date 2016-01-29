@@ -7,7 +7,7 @@
 
 ```
 系统: centos7.1
-rap版本:  rap_release_v0.11.3_20150727.war
+rap版本:  RAP-0.14.0-SNAPSHOT.war
 ```
 
 ###安装基础软件
@@ -15,19 +15,19 @@ rap版本:  rap_release_v0.11.3_20150727.war
 ```
 wget http://repo.mysql.com/yum/mysql-5.6-community/el/7/x86_64/mysql-community-libs-5.6.26-2.el7.x86_64.rpm
 rpm -ivh mysql-community-release-el7-5.noarch.rpm
-yum install -y mysql-server nginx tomcat unzip 
+yum install -y mysql-server nginx tomcat unzip redis
 ```
 
 下载war包
 
 ```
-wget https://raw.githubusercontent.com/thx/RAP/release/release/rap_release_v0.11.3_20150727.war
+wget http://rap.taobao.org/release/RAP-0.14.0-SNAPSHOT.war
 ```
 
 解压至ROOT
 
 ```
-unzip -x rap_release_v0.11.3_20150727.war -d ROOT
+unzip -x RAP-0.14.0-SNAPSHOT.war -d ROOT
 
 ```
 
@@ -53,7 +53,7 @@ mysql -u rap -p rap_db < ROOT/WEB-INF/classes/database/initialize.sql
 配置应用中数据库连接
 
 ```
-vi ROOT/WEB-INF/classes/mysql.local.properties
+vi ROOT/WEB-INF/classes/config.properties 
 ```
 
 修改为刚才创建的数据库用户名及密码
@@ -62,6 +62,13 @@ vi ROOT/WEB-INF/classes/mysql.local.properties
 jdbc.username=rap
 jdbc.password=password
 
+```
+
+其中redis配置可根据需求更改
+
+启动redis
+```
+systemctl  start redis
 ```
 
 ###配置tomcat
@@ -130,7 +137,3 @@ firewall-cmd --reload
 tomcat日志位于: /var/log/tomcat
 
 nginx日志位于:  /var/log/nginx
-
-###已知bug:
-
-rap应用日志无法打印
