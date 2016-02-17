@@ -14,7 +14,6 @@
 - [常见问题](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
   - [如何管理团队](#%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E5%9B%A2%E9%98%9F)
   - [如何增加管理员](#%E5%A6%82%E4%BD%95%E5%A2%9E%E5%8A%A0%E7%AE%A1%E7%90%86%E5%91%98)
-  - [为什么有mysql.local.properties和mysql.remote.properties两个数据库配置文件?](#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89mysqllocalproperties%E5%92%8Cmysqlremoteproperties%E4%B8%A4%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)
   - [如何获取更新？](#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E6%9B%B4%E6%96%B0%EF%BC%9F)
   - [Admin初始密码是什么？](#admin%E5%88%9D%E5%A7%8B%E5%AF%86%E7%A0%81%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F)
 
@@ -38,7 +37,7 @@
 在[Release](https://github.com/thx/RAP/releases)页面中下载war包（建议用最新），
 将war包修改为`ROOT.war`后放入tomcat webapps文件夹中。
 startup.sh(.bat)启动tomcat，该war包自动部署到文件夹ROOT
-停掉服务器，打开ROOT中得WEB-INF`/classes/mysql.local.properties` 来修改数据库配置
+停掉服务器，打开ROOT中得WEB-INF`/classes/config.properties` 来修改数据库配置
 启动tomcat，完成部署。
 
 ```
@@ -94,7 +93,7 @@ SET @@global.sql_mode = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION';
 
 ### 配置文件
 
-请正确配置`src/mysql.local.properties`中的数据库连接地址、用户名和密码。
+请正确配置`src/config.properties`中的数据库连接地址、用户名和密码。
 
 ### 配置context-root （war包部署不需要）
 
@@ -121,10 +120,6 @@ SET @@global.sql_mode = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION';
 ### 如何增加管理员
 
 在tb\_role\_and\_user中添加一条记录，user_id是管理员的id，role_id是1(超级管理员)或2(管理员)。
-
-### 为什么有mysql.local.properties和mysql.remote.properties两个数据库配置文件?
-
-为了方便开发环境和线上部署环境的切换，在src/application.xml中搜索mysql.local.properties, 修改成remote即可切换到remote模式。
 
 ### 如何获取更新？
 
