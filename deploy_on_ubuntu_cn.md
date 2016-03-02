@@ -7,7 +7,7 @@
 
 ```
 系统: ubuntu 14.04
-rap版本:  RAP-0.14.0-SNAPSHOT.war
+rap版本:  RAP-0.14.1-SNAPSHOT.war
 ```
 
 ###安装基础软件
@@ -20,7 +20,7 @@ sudo apt-get install mysql-server-5.6 nginx tomcat7 tomcat7-admin unzip redis-se
 下载war包
 
 ```bash
-wget http://rap.taobao.org/release/RAP-0.14.0-SNAPSHOT.war
+wget http://rap.taobao.org/release/RAP-0.14.1-SNAPSHOT.war
 ```
 
 解压应用至ROOT
