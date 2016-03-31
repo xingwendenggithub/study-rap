@@ -143,7 +143,7 @@ reg:www.example/biz[0-9]{4}/query
 
 这里MOCK服务会根据正则来匹配正确的接口。
 
-具体例子请参见项目：[RESTful API支持](http://{{domainName}}/workspace/myWorkspace.action?projectId=265&mock=true)
+具体例子请参见项目：[RESTful API支持](http://rap.taobao.org/workspace/myWorkspace.do?projectId=2347#13798)
 
 
 ##### 根据实际传参值决定所匹配接口
@@ -195,6 +195,8 @@ id|+1     @mock=100
 ```
 
 具体Mock规则如何填写，请访问<a href="http://mockjs.com" target="_blank">MockJS文档</a>，也可参考RAP平台中MockJS对接的例子。
+
+在RAP中写Mock规则的各种示例接口，请访问<a href="http://rap.taobao.org/workspace/myWorkspace.do?projectId=2348#13810" target="_blank">MockJS DEMO项目</a>
 
 #### Mock规则填写示范
 
