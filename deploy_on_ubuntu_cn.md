@@ -26,7 +26,7 @@ wget http://rap.taobao.org/release/RAP-0.14.1-SNAPSHOT.war
 解压应用至ROOT
 
 ```
-unzip -x RAP-0.14.0-SNAPSHOT.war -d ROOT
+unzip -x RAP-0.14.1-SNAPSHOT.war -d ROOT
 
 ```
 
