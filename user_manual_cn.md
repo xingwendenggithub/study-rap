@@ -422,7 +422,7 @@ http://{domaiName}/validate/{projectId}/{relativePath}?json={jsonToCompare}
 * `{relativePath}`为相对路径，与mock服务类似。例如：
     * `真实后端接口`为：http://xxx/getJson.php，项目ID为334，则
     * `API验证接口`为：http://{domainName}/validate/334/**getJson.php**.
-* `{jsonToCompare}`为想要必要的JSON数据，一般为真实数据
+* `{jsonToCompare}`为想要比较的JSON数据，一般为真实数据
 * `{projectId}`为项目ID
 
 #### 输出
