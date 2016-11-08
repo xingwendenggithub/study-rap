@@ -36,6 +36,7 @@ unzip -x RAP-0.14.1-SNAPSHOT.war -d ROOT
 创建数据库及用户
 
 ```
+/etc/init.d/mysql start
 mysql -uroot -p
 create database rap_db;
 grant all on rap_db.* to 'rap'@'localhost' IDENTIFIED BY 'password';
