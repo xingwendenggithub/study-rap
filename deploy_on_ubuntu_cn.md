@@ -27,7 +27,6 @@ wget http://rap.taobao.org/release/RAP-0.14.1-SNAPSHOT.war
 
 ```
 unzip -x RAP-0.14.1-SNAPSHOT.war -d ROOT
-
 ```
 
 
@@ -107,7 +106,6 @@ server {
 
         }
 }
-
 ```
 
 重启nginx
