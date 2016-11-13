@@ -65,7 +65,9 @@ jdbc.password=password
 ```
 
 其中redis配置可根据需求更改
-
+```
+service redis-server start
+```
 
 ###配置tomcat
 
