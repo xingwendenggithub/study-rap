@@ -447,3 +447,8 @@ Advantages:
 2. Save network bandwidth.
 3. More flexible, have a chance to change rules in specific scene.
 ```
+
+RAP插件默认发出请求的路径仍然是mockjs，需要在浏览器中执行`RAP.setPrefix('/mockjsdata/')`这条语句修改路径
+
+## 升级mockjs
+RAP本身自带的mockjs版本过低，不支持中文字符串等新特性，升级方法可以参考[这里](https://github.com/thx/RAP/issues/523)，还有[这里](https://github.com/thx/RAP/issues/513)
