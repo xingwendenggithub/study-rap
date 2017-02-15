@@ -54,7 +54,14 @@ mysql -u rap -p rap_db < ROOT/WEB-INF/classes/database/initialize.sql
 ```
 vi ROOT/WEB-INF/classes/config.properties
 ```
-
+```
+jdbc.driverClassName=com.mysql.jdbc.Driver
+jdbc.url=jdbc\:mysql\://localhost\:3306/rap_db?useUnicode\=true&characterEncoding\=utf8&zeroDateTimeBehavior\=convertToNull&noAccessToProcedureBodies\=true
+jdbc.username=rap
+jdbc.password=password
+redis.host=localhost
+redis.port=6379
+```
 修改为刚才创建的数据库用户名及密码
 
 ```
