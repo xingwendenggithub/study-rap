@@ -52,7 +52,7 @@ mysql -u rap -p rap_db < ROOT/WEB-INF/classes/database/initialize.sql
 
 配置应用中数据库连接
 ```
-vi ROOT/WEB-INF/classes/mysql.local.properties
+vi ROOT/WEB-INF/classes/config.properties
 ```
 
 修改为刚才创建的数据库用户名及密码
