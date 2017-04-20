@@ -62,7 +62,7 @@ jdbc.password=password
 redis.host=localhost
 redis.port=6379
 ```
-### redis配置需要特别注意的地方，port只能等于6379， 且不能设置redis密码，且只能用0号库
+> redis配置需要特别注意的地方，port只能等于6379， 且不能设置redis密码，且只能用0号库
 修改为刚才创建的数据库用户名及密码
 
 ```
